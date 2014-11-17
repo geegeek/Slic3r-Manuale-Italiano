@@ -1,4 +1,4 @@
-# Slic3r Manual
+# Slic3r Manuale
 
 The first release of this manual was sponsored by Lulzbot - Aleph Objects, Inc. and written by Gary Hodgson.
 
