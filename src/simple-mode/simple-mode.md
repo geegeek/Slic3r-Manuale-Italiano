@@ -1,73 +1,43 @@
-% Simple Mode
+% Modalità Semplificata
 
-Slic3r has two modes of operation, Simple and Expert. These may be
-chosen from the `Preferences` window (found under the `File` menu).
+Slic3r ha due modalità di funzionamento, Semplificata e per Esperti. Queste possono essere scelte  dalla finestra delle `Preferenze` (che trovate sotto il menù `File`).
 
 [ht] ![Preferences.](images/preferences_general.png "fig:")
 
 
-Simple mode offers a reduced set of options, enough for the beginner to
-get started with. Expert mode give more control over how Slic3r produces
-the G-code and will be looked at later.
+La Modalità Semplificata offre un ridotto Insieme di opzioni, abbastanza per chi è alle prime armi che vuole iniziare. La modalità esperti dà maggiore controllo su come Slic3r produce il G-code e verrà meglio approfondita più avanti.
 
-Print Settings
+Impostazioni di Stampa
 --------------
 
-The `Print Settings` tab provides the opportunity to change settings
-related to the actual print. Whereas the other tabs are changed rarely,
-the settings on this tab will be modified regularly, possibly for each
-model printed.
+La Scheda `Impostazioni di Stampa` fornisce la possibilità di modificare le impostazioni relative alla stampa attuale. Mentre le altre schede subiscono raramente cambiamenti,
+le impostazioni su questa scheda verranno modificate regolarmente, probabilmente per ogni modello stampato.
 
 [ht] ![Simple Mode: Print
 Settings.](images/simple_mode_print_settings.png "fig:")
 
 
-#### General.
+#### Generale.
 
 
 
-`Layer height` is the thickness of each layer, and it is the step along
-the vertical axis taken before extruding a new layer atop the previous
-one. There are several factors that influence how high each layer should
-be:
+`Altezza del livello è lo spessore di ogni livello, ed è il passo che l' asse verticale realizza prima di estrudere un nuovo livello sopra il precedente. Ci sono diversi fattori che influenzano il qunato alto deve essere ogni livello:
 
--   **Desired resolution** - Lower layer height should result in prints
-    with less noticeable ribs or bands, as each layer is smaller.
-    Aesthetics plays a role here, but also the type of model, for
-    example, a mechanical part may not need such a high resolution
-    finish, whereas a presentation piece may do so.
+-   **Desiderio di risoluzione** - Un livello più alto dovrebbe risultare nella stampa con venature e bordimeno visibili, proprio perchè ogni livello è più piccolo.
+    L' estetica gioca un roulo importante in questo aspetto, ma anche il tipo di modello, per esempio , una parte meccanica può non richiedere una risoluzione a così alta finitura, mentre un pezzo da esposizione si.
 
--   **Print speed** - Shorter layers will result in smoother prints but
-    each print will take longer, simply because the extruder must trace
-    the pattern more times. A later goal will be to strike a balance
-    between layer height, the speed of the printer, and the quality of
-    the resulting print.
+-   **Velocità di stampaPrint speed** - Livelli più corti si tradurranno in risultati di stampa più accurati ma ogni stampa impiegherà di più, semplicemente perchè l' estrusore dovrà tracciare il percorso del modello più volte. Un obiettivo in seguito sarà quello di trovare per la propria stampante un compromesso tra l' Altezza del livello, la velocità di stampa della stampante, e la qualità del prodotto finito.
 
-`Perimeters` defines the minimum number of vertical shells (i.e. walls)
-a print will have. Unless the model requires single width walls it is
-generally recommended to have a minimum of two perimeters as this gives
-some insurance that if a section of the perimeter is not printed
-correctly then the second perimeter will help cover it.
+`Il Perimetro definisce il numero minimo di scaffalature verticali ( cioè Muri) che una stampa dovrà avere. A meno che il modello richieda un unico muro largo è generalmente raccomandato di avere un minimo di 2 perimetri in modo da dare un minimo di garanzia che se una sezione del perimetro non è stampata correttamente allora il secondo perimetro aiuterà a coprirla.
 
-The upper and lowermost layers that sandwich the model are filled with a
-`Solid layers` pattern. For the bottom layers the important factor to
-consider is how the surface will look should there be a mistake whilst
-laying down the first layer, and for this reason it is recommended to
-have at least two bottom layers.
+Gli strati (livelli) estremi superiori ed inferiori che racchiudono il modello sono riempiti con un `Trama a riempimento solido`. Per i livelli estremi inferiori il fattore importante da considerare è come la superficie che appare sembrerà se ci fosse un errore nel depositare il filamento del primo strato (livello), e per questa ragione è raccomandato di impostare almeno 2 livelli inferiori.
 
-A similar consideration is required for the top layers. Because the
-intermediate layers are likely to be filled with a pattern set less than
-100% then the covering layers will have to bridge this pattern and this
-can require more than one pass to cover completely.
+Una considerazione simile è richiesta per gli strati superiori. In qunato gli strati intermedi verranno riempiti con uno schema pre-impostato e questo può richiedere più di un passaggio per coprirlo completamente.
 
  ![An example of insufficient top
 layers.](images/bad_top_infill.jpg "fig:") 
 
-Another tip to consider: Setting the top solid layer to zero, and
-setting the infill also to zero, will result in a hollow receptacle,
-ideal for turning models into vases[^1] for example. Here manipulating
-the settings within Slic3r can be used to generate different kinds of
-prints, and not only be used to control surface accuracy.
+Un altro consiglio da considerare: Impostare gli strati estremi superiori a zero, ed impostare anche un piempimento pari a zero, ciò si tradurra in un recipiente cavo, ideale per convertire i vostri modelli per esempio in vasi[^1]. Qui per esempio una manipolazione delle impostazioni all' interno di Slic3r può essere usata per generare differenti tipi di stampe, e non solo per controllare l' accuratezza di stampa.
 
  ![Creating a vase from a solid
 model.](images/solid_layers_vases.png "fig:")
