@@ -1,65 +1,55 @@
-% Downloading
+% Scaricamento
 
-Slic3r can be downloaded directly from:
+Slic3r può essere scaricato direttamente da:
 <http://slic3r.org/download>.
 
-Pre-compiled packages are available for Windows, Mac OS X and Linux.
-Windows and Linux users can choose between 32 and 64 bit versions to
-match their system.
+Pacchetti pre-compilati sono disponibili per Windows, Mac OS X e Linux.
+Gli utenti Windows e Linux possono scegliere tra la versionea 32 e 64 bit da abbinare al loro sistema.
 
-Source
+Sorgente
 ------
 
-The source code is available via GitHub:
-<https://github.com/alexrj/Slic3r>. For more details on building from
-source see § below.
+Il codice sorgente è disponibile attraverso GitHub:
+<https://github.com/alexrj/Slic3r>. Per maggiori dettagli sulla compilazione del codice sorgente vedere § sotto.
 
-Installing
+Installazione
 ==========
 
 Windows
 -------
 
-Unzip the downloaded zip file to a folder of your choosing, there is no
-installer script. The resulting folder contains two executables:
+Scompatta il file .zip scaricato in una cartella di tua scelta, non ci sono script d' installazione. La cartella risultante contiene due eseguibili:
 
--   `slic3r.exe` - starts the GUI version.
+-   `slic3r.exe` - avvia l' interfaccia grafica di Utente.
 
--   `slic3r-console.exe` - can be used from the command line.
+-   `slic3r-console.exe` - può essere usato da linea di comando.
 
-The zip file may then be deleted.
+Il file zip può essere cancellato.
 
 Mac OS X
 --------
 
-Double-click the downloaded dmg file, an instance of Finder should open
-together with an icon of the Slic3r program. Navigate to the
-Applications directory and drag and drop the Slic3r icon into it. The
-dmg file may then be deleted.
+Doppio-click sul file .dmg scaricato, un' istanza di Finder dovrebbe aprirsi insieme con un icona del programma Slic3r. Naviga nella cartella Applicazioni e trascina l' icona di Slic3r al suo interno. Il file .dmg a questo punto può essere cancellato.
 
 Linux
 -----
 
-Extract the archive to a folder of your choosing. Either:
+Estrai l' archivio in una cartella a tua scelta. Oppure:
 
--   Start Slic3r directly by running the Slic3r executable, found in the
-    bin directory, or
+-   Avvia Slic3r direttamente avviando l' eseguibile di Slic3r, che trovi nella cartella bin, oppure
 
--   Install Slic3r by running the do-install executable, also found in
-    the bin folder.
+-   Installa Slic3r avviando l' eseguibile che procederà all' installazione, che trovi anche nella cartella bin.
 
-The archive file may then be deleted.
+L' archivio può ora essere cancellato.
 
-Building from source
+Compilare da sorgente
 ====================
 
 
 
-For those wishing to live on the cutting edge, Slic3r can be compiled
-from the latest source files found on GitHub[^1].
+Per coloro che volessero vivevere sul filo del rasoio, Slic3r può essere compilato dagli ultimi file sorgente che si trovano su GitHub[^1].
 
-Up-to-date instructions for compiling and running from source can be
-found on the Slic3r wiki.
+Istruzioni aggiornate per la compilazione e l' avvio da sorgente possono essere trovate sul wiki di Slic3r.
 
 -   **GNU Linux**
 
