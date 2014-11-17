@@ -43,43 +43,25 @@ Un altro consiglio da considerare: Impostare gli strati estremi superiori a zero
 model.](images/solid_layers_vases.png "fig:")
 
 
-#### Infill.
+#### Riempimento.
 
- `Fill density` is defined on a scale of between 0
-and 1, where 1 is 100% and 0.4 would be 40%. For the majority of cases
-it makes no sense to 100% fill the model with plastic, this would be a
-waste of material and take a long time. Instead, most models can be
-filled with less material which is then sandwiched between layers filled
-at 100% (see `Solid layers` above).
+ `Riempire la Densità` è definito su una scala tra 0 e 1, dove 1 è il 100% e 0,4 sarebbe il 40%. Per la maggior parte dei casi non ha senso il 100% di riempimento in plastica del modello, ciò rappresenterebbe uno spreco di materiale ed impiegherebbe troppo tempo. Invece, molti modelli possono essere riempiti al loro interno con meno materiale e poi poi inseriti fra strati in materiale pieno al 100% (vedi sopra `Strati Solidi o Livelli Solidi`).
 
-A density value of 0.4 is enough to give almost all models good
-mechanical strength. A value of 0.2 is usually the minimum required to
-support flat ceilings.
+Un valore di densità del 0.4 è abbastanza per dare a qualsiasi modello una buona resistenza meccanica. Un valore di 0.2 è solitamente considerato il minimo richiesto a sostenere soffitti piani.
 
-Slic3r offers several fill patterns which will be discussed in more
-depth in section  - Infill Choices.
-Choosing a `Fill pattern` will depend on the kind of model, the desired
-structural strength, print speed, and personal taste. The more exotic
-fill methods are usually too slow and unnecessarily complex for most use
-cases, and so most of the time the infill pattern is either
-`rectilinear`, `line`, or `honeycomb`. Honeycomb gives the most strength
-but is slower than both rectilinear or line.
+Slic3r offre diversi schemi di riempimento dei quali discuteremo meglio nella sezione di approfondimento - Scelte di Riempimento.
+Scegliere uno `Schema di Riempimento` Dipenderà dal tipo di modello, dai desideri di robustezza strutturale, dalla velocità di stampa, e dal gusto personale del risultato che si vuole ottenere. I più esotici metodi di riempimento sono di solito troppo lenti e non necessariamente complessi per molti dei casi di uso, e così la maggior parte delle volte gli schemi di riempimento usati sono:
+`rectilineare`, `linea`, or `nido d'ape`. Nido d'ape fornisce la maggior robustezza ma è più lento sia del metodo rettilineare che del metodo linea.
 
-#### Support material.
+#### Materiale di Supporto.
 
- Printing a model from the bottom up, as
-with FDM, means that any significant overhangs will be printed in the
-air, and most likely droop or not print correctly. Choosing support
-material (`Generate support material`) will add additional structures
-around the model which will build up to then support the overhanging
-part. The `Pattern spacing` option determines how dense the support
-material is printed.
+ Stampare un modello dal basso verso l' alto, con una tecnica come l' FDM, significa che ogni sbalzo significativo verrà stampato nell' aria, è più probabilmente cadrà materiale (nel vuoto) e non stamperà correttamente. Scegliere materiale di supporto (`Opzione: Generare materiale di Supporto`) aggiungerà strutture addizionali attorno al modello che si accumula per poi sostenere la parte strutturale sovrastante. L' opzione `Schema di spaziamento o Pattern spacing` determina quanto deso il materiale di supporto deve essere nel venire stampato.
 
  ![An example of an object printed with support
 material.](images/support_example.jpg "fig:")
 
 
-Tip: It is sometimes worth considering altering the orientation of the
+Consiglio: It is sometimes worth considering altering the orientation of the
 model in order to possibly reduce overhangs.
 
 `Raft layers` will add additional layers underneath the model and stems
