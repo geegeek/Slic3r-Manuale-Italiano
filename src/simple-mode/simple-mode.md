@@ -2,7 +2,7 @@
 
 Slic3r ha due modalità di funzionamento, Semplificata e per Esperti. Queste possono essere scelte  dalla finestra delle `Preferenze` (che trovate sotto il menù `File`).
 
-[ht] ![Preferences.](images/preferences_general.png "fig:")
+ ![Preferences.](images/preferences_general.png "fig:")
 
 
 La Modalità Semplificata offre un ridotto Insieme di opzioni, abbastanza per chi è alle prime armi che vuole iniziare. La modalità esperti dà maggiore controllo su come Slic3r produce il G-code e verrà meglio approfondita più avanti.
@@ -26,7 +26,7 @@ Settings.](images/simple_mode_print_settings.png "fig:")
 -   **Desiderio di risoluzione** - Un livello più alto dovrebbe risultare nella stampa con venature e bordimeno visibili, proprio perchè ogni livello è più piccolo.
     L' estetica gioca un roulo importante in questo aspetto, ma anche il tipo di modello, per esempio , una parte meccanica può non richiedere una risoluzione a così alta finitura, mentre un pezzo da esposizione si.
 
--   **Velocità di stampaPrint speed** - Livelli più corti si tradurranno in risultati di stampa più accurati ma ogni stampa impiegherà di più, semplicemente perchè l' estrusore dovrà tracciare il percorso del modello più volte. Un obiettivo in seguito sarà quello di trovare per la propria stampante un compromesso tra l' Altezza del livello, la velocità di stampa della stampante, e la qualità del prodotto finito.
+-   **Velocità di stampa** - Livelli più corti si tradurranno in risultati di stampa più accurati ma ogni stampa impiegherà di più, semplicemente perchè l' estrusore dovrà tracciare il percorso del modello più volte. Un obiettivo in seguito sarà quello di trovare per la propria stampante un compromesso tra l' Altezza del livello, la velocità di stampa della stampante, e la qualità del prodotto finito.
 
 `Il Perimetro definisce il numero minimo di scaffalature verticali ( cioè Muri) che una stampa dovrà avere. A meno che il modello richieda un unico muro largo è generalmente raccomandato di avere un minimo di 2 perimetri in modo da dare un minimo di garanzia che se una sezione del perimetro non è stampata correttamente allora il secondo perimetro aiuterà a coprirla.
 
