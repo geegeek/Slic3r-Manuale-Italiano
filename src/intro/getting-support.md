@@ -1,63 +1,47 @@
-% Slic3r Support
+% Slic3r: Supporto
 
-If this manual doesn't the answer to your problem you can try several things:
+Se questo manuale non risponde a qualcuno dei tuoi problemi puoi provare in diversi altri modi:
 
-IRC
+Canale IRC 
 ---
 
-Found on the `irc.freenode.net` server, the following chat rooms are
-often filled with people who can provide real-time help:
 
-* `#reprap`: Highly active community of the RepRap project with many
-    users of Slic3r.
+Trovi sul server `irc.freenode.net` , la seguenti stande, le quali sono di solito piene di persone che sono in grado di aiutarti in tempo reale:
 
-* `#slic3r`: Slic3r chat room where Slic3r developers and users can
-    give help.
+* `#reprap`: Una comunità molto attiva del progeetto RepRap con molti utenti di Slic3r.
+
+* `#slic3r`: Una chatroom di Slic3r dove gli sviluppatori e gli utenti di Slic3r  possono aiutarsi e dare aiuto.
 
 RepRap.org Forum
 ----------------
 
-A dedicated [forum for Slic3r](forums.reprap.org/list.php?263) exists in the
-RepRap forums.
+Un mirato [forum di Slic3r](forums.reprap.org/list.php?263) esiste tra i forum di RepRap.
 
 Issue Tracker
 -------------
 
-If a bug may have been found in the software, or you want to raise any other
-issue, you can post to the [GitHub issue tracker](http://github.com/alexrj/Slic3r/issues).
+Se un bug riesce ad essere trovato nel software, oppure vuoi mettere in evidenza un altro problema puoi postare sul  [GitHub issue tracker](http://github.com/alexrj/Slic3r/issues).
 
-**Please** make sure you've read the guidelines below.
+**Perfavore** assicurati di avere letto le linee guida qui sotto.
 
-Guidelines for reporting an issue
+GuideLinea per riportare un problema
 ---------------------------------
 
-Keep in mind that developers are working on a volunteer basis, and the volume
-of requests related to Slic3r is overwhelming, so **please** understand that 
-the most **complete and clear report** you make more chances are that you'll get
-help and attention.
+Tieni in mente che gli sviluppatori stanno lavorando su una base di volontari, ed il volume delle richieste relative a Slic3r è travolgente, perciò **perfavore** siatene consapevoli e cercate di realizzare il ** report più completo e chiaro possibile** meglio riuscite a fare maggiori saranno le vostre possibilità di avere aiuto ed attenzione.
 
-* There is a good chance that the issue, you have encountered, is already reported.
-  Please check the [list of reported issues](https://github.com/alexrj/Slic3r/issues)
-  before creating a new issue report. If you find an existing issue report, feel free
-  to add further information to that report.
-* Include **STL file and config.ini** (exported from *File* -> *Export config...*)
-  that can be used to **reproduce the issue**.
-* Include **screenshots of the G-code preview** demonstrating that the issue can be
-  seen in the G-code and it's not caused by mechanical problems or by the firmware.
-* Specify Slic3r version (or commit number) and operating system.
-* Make sure the STL file is manifold (failure to repair a broken model is not
-  considered a bug; we only deal with bugs reproducible with valid models).
-* Include one issue per report. If you encounter multiple, unrelated issues,
-  please report them as such.
+* C'è un alta probabilità che la problematica, che state riscontrando, è già stata riportata.
+  Perfavore controllate la [lista delle problematiche riportate](https://github.com/alexrj/Slic3r/issues)
+  prima di creare una nuova segnalazione. Se trovi una segnalazione esistente riportata, sentiti libero di approfondire ed aggiungere maggiori informazioni su quel report.
+* Includi il **file STL e config.ini** (si esporta da *File* -> *Export config...*)
+  e può essere utilizzato per **riprodurre la problematica**.
+* Includi gli **screenshots dell' anteprima del G-code ** dimostrando che la problematica può essere visualizzata nel G-code e non è causata da problemi maccanici o dal firmware.
+* Specifica la versionde diSlic3r (o il numero di commit) ed il sistema operativo.
+* Assicurati che il file STL sia corretto ( fallimenti dovuti ad un modello corrotto o errato non sono considerati un bug; noi trattiamo solo bug riproducibili con modelli validi nel loro formato).
+* Fare un report per ogni segnalazione. Se incontrate multiple, non correlate problematiche, perfavore riportatele separatamente per come sono.
 
-Guidelines for requesting features
+Linee Guida per la richiesta di caratteristiche aggiuntive
 ----------------------------------
 
-Slic3r is a community project, and features are usually added whenever there is
-general consensus on them. Please start by describing your *goal* by showing
-a concrete case. Show G-code of a real case produced with current Slic3r
-and describe what would you like to improve and why. Put efforts into documenting
-this with pictures, G-code preview screenshots, close inspection.
+Slic3r è un progetto comunitario, ed ulteriori caratteristiche sono solitamente aggiunte quando c'è un consenso generale su di esse.. Perfavore iniziate a descrivere i vostri *obiettivi* spiegandone un caso concreto. Mostrate il G-code di un caso reale di produzione con l' attuale Slic3r e descrivete cosa vorreste migliorato e perchè. Mettete impegno nella documentazione con immagini, anteprime di screenshot di G-code, ponendo un attento esame nella stesura del testo.
 
-After you're focused on **why** you can move onto ideas for **how** to achieve that
-goal. But don't invert the order and the efforts.
+Dopo che vi sarete concentrati sul **perchè** potrete descrivere l' idea sul **come** raggiungere quell' obiettivo. Ma non invertite l' ordine e gli sforzi.

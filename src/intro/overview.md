@@ -1,33 +1,27 @@
-% Overview
+% Panoramica
 
-*This manual was sponsored by* ![image](images/lulzbot_logo.png)
-*and written by Gary Hodgson*
+*Questo manuale è stato sponsorizzato in prima istanza da* ![image](images/lulzbot_logo.png)
+* e scritto da Gary Hodgson*. *La versione Italiana è stata tradotta senza fini di lucro da Luigi Smiraglio (mail:61615m1@gmail.com) insieme alla collaborazione dell' Hacking Laboratory Cosenza * ![image](images/logohacklab.png)
+* dato il suo attivismo nella diffusione delle tecnologie RepRap.
 
-Slic3r is a tool which translates digital 3D models into instructions
-that are understood by a 3D printer. It slices the model into horizontal
-layers and generates suitable paths to fill them.
+Slic3r è uno strumento che converte i modelli digitali 3D in istruzioni comprensibili da una stampante 3D. Esso affetta il modello in strati (layer) orizzontali e genera un percorso adatto affinchè vengano riempiti.
 
-Slic3r is already bundled with the many of the most well-known host
-software packages: Pronterface, Repetier-Host, ReplicatorG, and can be
-used as a standalone program.
+Slic3r è gia affiancato da molti dei più-famosi software grafici: Pronterface, Repetier-Host, ReplicatorG, e può essere usato anche come programma autonomo.
 
-This manual will provide guidance on how to install, configure and
-utilise Slic3r in order to produce excellent prints.
+Questo manuale fornirà una guida sul come installare, configurare ed utilizzare Slic3r in modo da produrre una stampa eccellente.
 
-Goals & Philosophy
+Obiettivi & Filosofia
 ==================
 
-Slic3r is an original project started in 2011 by Alessandro Ranellucci
-(aka. Sound). Readability and maintainability of the code are among the 
-design goals, as well as power and flexibility. Slic3r aims to be a 
-professional CAM tool.
+Slic3r è un progetto partito da zero ed iniziato nel 2011 da Alessandro Rannellucci ( Si un italiano come noi :-D), anche conosciuto con lo pseudonimo di "Sound". Leggibilità e manutenzione del codice sono tra gli i nostri obiettivi, così come prestazioni e flessibilità. Slic3r vuole essere uno programma di CAM professionale.
 
-The program is under constant refinement, from Alessandro and the other
-contributors to the project, with new features and bug fixes being
-released on a regular basis.
+Il programma è sotto costante perfezionamento, da parte di alessandro Alessandro e da parte degli altri contributori del progetto, con nuove caratteristiche e risoluzione dei bug che vengono rilasciati in cadenza costante.
 
-Donations and Sponsorship
+Donazioni e sponsorizzazioni
 =========================
 
-The opportunity to say thank you via a donation exists. More details can
-be found at: <http://slic3r.org/donations>.
+L' opportunità di dire grazie attraverso una donazione esiste. Più dettagli possono essere trovati all' indirizzo: <http://slic3r.org/donations>.
+
+Anche io stesso che ho tradotto questa documentazione, in italiano, a maggior ragione se questa documentazione ti è stata utile, ti chiedo di supportare il progetto ufficiale con una donazione.
+
+L' HacklabCosenza in quanto attivo nel suo territorio in progetti di diffusione culturale del software libero, apprezzerebbe soltanto che dessi solo un occhiata ad i suoi canali ed eventualmente tenerti in contatto. Visita il sito: <http://hlcs.it> . Grazie 
