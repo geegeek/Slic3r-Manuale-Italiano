@@ -1,8 +1,11 @@
-# Slic3r Manuale
+# Slic3r Manuale ITALIANO
 
-The first release of this manual was sponsored by Lulzbot - Aleph Objects, Inc. and written by Gary Hodgson.
+La prima versione del manuale è stata sponsorizzata da Lulzbot - Aleph Objects, Inc. e scritta da Gary Hodgson. Successivamente tradotta in ITALIANO da Luigi Smiraglio (aka geegeek) dell' HackLab Cosenza.
 
-You can read the manual at http://manual.slic3r.org/
+Puoi leggere questo manuale in versione italiana all' indirizzo: http://hlcs.it, mentre troverai riferimento al manuale originale all' indirizzo: http://manual.slic3r.org/
 
-Copyright 2013-2014, Aleph Objects, Inc.
+Copyleft 2013-2014
 License: CC-BY-SA 3.0
+
+
+
