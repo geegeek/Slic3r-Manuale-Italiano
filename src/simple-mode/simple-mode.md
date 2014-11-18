@@ -61,47 +61,33 @@ Scegliere uno `Schema di Riempimento` Dipenderà dal tipo di modello, dai deside
 material.](images/support_example.jpg "fig:")
 
 
-Consiglio: Talvolta è opportuno considerare di modificare l' orientazione del modello in modo da migliorare la possibilità che verifichino sbalzi nel vuoto. Ad esempio molti modelli disegnati per l' FDM sono concepiti per avere un lato di stampa ottimale per la riduzione di tale fenomeno.
-Nel seguente esempio, il modello è stato realizzato tenendo conto degli sbalzi nel vuoto e minimizzado il più possibile questa possibilità. Ulteriori parti (che poi verranno facilmente rimosse) , come quella evidenziata, sono state aggiunte per garantire una buona stampa senza gli strati di supporto. In questo caso il modello presenta una tendenza ad essere stampato in un particolare orientamento che è quello in figura.
+Consiglio: Talvolta è opportuno considerare di modificare l' orientazione del modello in modo da diminuire le possibilità che si verifichino sbalzi nel vuoto. Ad esempio molti modelli disegnati per l' FDM sono concepiti per avere un lato di stampa ottimale per la riduzione di tale fenomeno.
+Nel seguente esempio, il modello è stato realizzato tenendo conto degli sbalzi nel vuoto e minimizzado il più possibile questa possibilità. In aggiunta ulteriori parti (che poi verranno facilmente rimosse) , come quella evidenziata, sono state concepite per garantire una buona stampa senza gli strati di supporto. In questo caso il modello presenta una tendenza ad essere stampato in un particolare orientamento che è quello in figura.
 
 ![Un esempio di un oggetto che và stampato seguento un preciso verso di stampa.](images/I2-wade.png "fig:")
 
-`Raft layers` will add additional layers underneath the model and stems
-from the early days of 3D printing. It can help with prints without a
-heated bed, or where the bed is not very flat, but it is usually not
-required and is not recommended. The raft also requires post-processing
-to remove it.
 
-#### Speed.
+`Livello Letto di Stampa` aggiungerà ulteriori livelli sotto il modello di stampa e tale opzione esiste sin dai primi giorni della stampa 3D. Questa opzione può aiutare con stampe senza un letto riscaldato, oppure dove il letto non è propriamente piatto, ma solitamente non è necessaria e nemmeno raccomandata. I Livelli di Letto di Stampa richiedono in post-produzione una rimozione manuale dal modello appena stampato.
 
- In simple mode there are only three speed settings
-to consider:
+#### Velocità.
 
--   `Perimeters` - The outline of the model may benefit from being
-    printed slightly slower so that the outside skin of the print has
-    fewer blemishes.
+In modo semplice ci sono solo tre impostazioni di velocità da considerare:
 
--   `Infill` - As the infill is hidden this can be extruded a little
-    faster. Take care though not to go too fast as higher speeds results
-    in thinner extrusions, and this may affect how the extrusions bond.
+-   `Perimetri` - Le linee esterne del modello possono beneficiare dall' essere stampate con maggiore lentezza così che la superficie esterna del modello appaia con minori imperfezioni.
 
--   `Travel` - The jump between the end of one extrusion and the next
-    should usually be performed as quickly as the printer will allow in
-    order to minimise any mess caused by material oozing from the
-    nozzle.
+-   `Riempimento` - Dato che il riempimento è nascosto esso può essere estruso ad una velocità più rapida. Fate attenzione però a non andare troppo    	     velocemente poichè velocità più elevate portano ad estrusioni più sottili del materiale, e ciò può influenzare il modo il cui la struttura di              riempento si lega.
 
-#### Brim.
+-   `Viaggio a vuoto` - Il salto tra la fine di una lina di estrusione e l' inizio di una prossima estrusione dovrebbe solitamente essere eseguito alla massima velocità che la stampante è in grado di imprimere in modo da minimizzare il disordine causato dal trasudamento di materiale dall' augello in temperatura.
 
- `Brim width` is used to add more perimeters to the
-first layer, as a base flange, in order to provide more surface area for
-the print to stick to the bed with in order to reduce warping (see
-§). The brim is then cut away once the
-print is finished and removed from the bed.
+#### Gonna.
+
+ `Larghezza Gonna` Questa opzione viene usata per aggiungere ulteriori perimetri al primo livello, come una flangia, in modo da fornire una maggiore superficie di base e migliorare le possibilità che la stampa si attacchi meglio al piatto di stampa e ridurre quindi la deformazione causata dal raffreddamento (vedi
+§). La Gonna è poi tagliata via una volta che la stampa è terminata e rimosse tutte le eccedenze dal piatto di stampa.
 
  ![An example of brim.](images/brim.jpg "fig:")
 
 
-#### Sequential Printing.
+#### Stampa Sequenziale.
 
  This feature allows to compose a plate of
 objects but have the printer complete each one individually before going
