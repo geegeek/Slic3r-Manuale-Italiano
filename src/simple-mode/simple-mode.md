@@ -62,9 +62,10 @@ material.](images/support_example.jpg "fig:")
 
 
 Consiglio: Talvolta è opportuno considerare di modificare l' orientazione del modello in modo da diminuire le possibilità che si verifichino sbalzi nel vuoto. Ad esempio molti modelli disegnati per l' FDM sono concepiti per avere un lato di stampa ottimale per la riduzione di tale fenomeno.
-Nel seguente esempio, il modello è stato realizzato tenendo conto degli sbalzi nel vuoto e minimizzado il più possibile questa possibilità. In aggiunta ulteriori parti (che poi verranno facilmente rimosse) , come quella evidenziata, sono state concepite per garantire una buona stampa senza gli strati di supporto. In questo caso il modello presenta una tendenza ad essere stampato in un particolare orientamento che è quello in figura.
 
-![Un esempio di un oggetto che và stampato seguento un preciso verso di stampa.](images/I2-wade.png "fig:")
+Nel seguente esempio, il modello è stato realizzato tenendo conto degli sbalzi nel vuoto e minimizzado il più possibile questa possibilità. In aggiunta ulteriori parti (che poi verranno facilmente rimosse) , come quella evidenziata, sono state concepite per garantire una buona stampa senza gli strati di supporto. In questo caso il modello presenta una tendenza ad essere stampato in un particolare verso di stampa che è quello in figura.
+
+![Un esempio di un oggetto che và stampato seguento un preciso orientamento di stampa.](images/I2-wade.png "fig:")
 
 
 `Livello Letto di Stampa` aggiungerà ulteriori livelli sotto il modello di stampa e tale opzione esiste sin dai primi giorni della stampa 3D. Questa opzione può aiutare con stampe senza un letto riscaldato, oppure dove il letto non è propriamente piatto, ma solitamente non è necessaria e nemmeno raccomandata. I Livelli di Letto di Stampa richiedono in post-produzione una rimozione manuale dal modello appena stampato.
@@ -77,7 +78,7 @@ In modo semplice ci sono solo tre impostazioni di velocità da considerare:
 
 -   `Riempimento` - Dato che il riempimento è nascosto esso può essere estruso ad una velocità più rapida. Fate attenzione però a non andare troppo    	     velocemente poichè velocità più elevate portano ad estrusioni più sottili del materiale, e ciò può influenzare il modo il cui la struttura di              riempento si lega.
 
--   `Viaggio a vuoto` - Il salto tra la fine di una lina di estrusione e l' inizio di una prossima estrusione dovrebbe solitamente essere eseguito alla massima velocità che la stampante è in grado di imprimere in modo da minimizzare il disordine causato dal trasudamento di materiale dall' augello in temperatura.
+-   `Viaggio a vuoto` - Il salto tra la fine di una lina di estrusione e l' inizio di una prossima estrusione dovrebbe solitamente essere eseguito alla massima velocità che la stampante è in grado di eseguire in modo da minimizzare il disordine causato dal trasudamento di materiale dall' augello in temperatura.
 
 #### Gonna.
 
