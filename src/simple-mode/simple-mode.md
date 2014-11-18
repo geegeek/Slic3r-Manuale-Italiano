@@ -82,7 +82,7 @@ In modo semplice ci sono solo tre impostazioni di velocità da considerare:
  `Larghezza Gonna` Questa opzione viene usata per aggiungere ulteriori perimetri al primo livello, come una flangia, in modo da fornire una maggiore superficie di base e migliorare le possibilità che la stampa si attacchi meglio al piatto di stampa e ridurre quindi la deformazione causata dal raffreddamento (vedi
 §). La Gonna è poi tagliata via una volta che la stampa è terminata e rimosse tutte le eccedenze dal piatto di stampa.
 
- ![An example of brim.](images/brim.jpg "fig:")
+ ![Un esempio di gonna.](images/brim.jpg "fig:")
 
 
 #### Stampa Sequenziale.
