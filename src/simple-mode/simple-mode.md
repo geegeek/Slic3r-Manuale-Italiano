@@ -61,8 +61,10 @@ Scegliere uno `Schema di Riempimento` Dipenderà dal tipo di modello, dai deside
 material.](images/support_example.jpg "fig:")
 
 
-Consiglio: It is sometimes worth considering altering the orientation of the
-model in order to possibly reduce overhangs.
+Consiglio: Talvolta è opportuno considerare di modificare l' orientazione del modello in modo da migliorare la possibilità che verifichino sbalzi nel vuoto. Ad esempio molti modelli disegnati per l' FDM sono concepiti per avere un lato di stampa ottimale per la riduzione di tale fenomeno.
+Nel seguente esempio, il modello è stato realizzato tenendo conto degli sbalzi nel vuoto e minimizzado il più possibile questa possibilità. Ulteriori parti (che poi verranno facilmente rimosse) , come quella evidenziata, sono state aggiunte per garantire una buona stampa senza gli strati di supporto. In questo caso il modello presenta una tendenza ad essere stampato in un particolare orientamento che è quello in figura.
+
+![Un esempio di un oggetto che và stampato seguento un preciso verso di stampa.](images/I2-wade.png "fig:")
 
 `Raft layers` will add additional layers underneath the model and stems
 from the early days of 3D printing. It can help with prints without a
