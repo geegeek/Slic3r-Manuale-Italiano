@@ -32,7 +32,7 @@ le impostazioni su questa scheda verranno modificate regolarmente, probabilmente
 Gli strati (livelli) estremi superiori ed inferiori che racchiudono il modello sono riempiti con un `Trama a riempimento solido`. Per i livelli estremi inferiori il fattore importante da considerare è come la superficie che appare sembrerà se ci fosse un errore nel depositare il filamento del primo strato (livello), e per questa ragione è raccomandato di impostare almeno 2 livelli inferiori.
 
 Una considerazione simile è richiesta per gli strati superiori. In qunato gli strati intermedi verranno riempiti con uno schema pre-impostato e questo può richiedere più di un passaggio per coprirlo completamente.
-
+ 
  ![An example of insufficient top
 layers.](images/bad_top_infill.jpg "fig:") 
 
@@ -87,51 +87,43 @@ In modo semplice ci sono solo tre impostazioni di velocità da considerare:
 
 #### Stampa Sequenziale.
 
- This feature allows to compose a plate of
-objects but have the printer complete each one individually before going
-back to Z = 0 and starting with the next one. See the section about
-Sequential Printing in the Advanced Topics chapter.
+ Questa caratteristica permette di comporre un piatto di oggeti ma di avere la stampa completa di ogni oggetto prima di risettare Z=0 ed iniziare con il prossimo oggetto. Vedere la sezione sulla Stampa Sequenziale nel capitolo delle Argomentazioni Avanzate.
 
-Filament Settings
+Impostazioni Filamento
 -----------------
 
-The `Filament Settings` will normally be used infrequently, for example
-on receipt of a new roll of filament.
+Le `Impostazioni Filamento` di norma verranno utilizzate con poca frequenza, per esempio alla ricezione di una nuova bobbina d di filamento.
 
  ![Simple Mode: Filament
 Settings.](images/simple_mode_filament_settings.png "fig:")
 
 
-#### Filament.
+#### Filamento.
 
- The `Diameter` setting will already have been filled from
-the value given during the wizard (see p.), but can be updated here.
+ Le impostazioni di `Diametro` saranno già state compilate durante la procedura guidata (see p.), ma possono essere aggiornate anche 
+successivamente in questa sezione.
 
-The `Extrusion multiplier` setting allows the fine tuning of the
-extrusion flow rate, and is is given as a factor, e.g. 1 means 100%, 1.5
-would mean 150%. Whilst the value should ideally be set in the firmware
-it can be useful to test slight changes to the rate by altering this
-value. It varies the amount of plastic proportionally and should be
-changed in very small steps (e.g. +/- 0.05) as the effects are very
-visible.
+L' impostazione `Estrusori Multipli` permette una messa a punto fino del flusso di estrusione, ed è espressa come fattore, esempio 1 significa 
+100%, 1,5 significherà 150%. Mentre il valore dovrebbe idealmente essere impostato nel firmware può essere utile impostare lievi cambiamenti al 
+flusso di estrusione alterando questo valore. Essa varia proporzionalmente la quantità di plastica e dovrebbe essere modificato in piccoli 
+passi (e.g. +/- 0.05) in modo che gli effetti siano molto visibili.
 
-#### Temperature.
+#### Temperatura.
 
- These values are also filled from the wizard, but here
-the opportunity exists to set the temperature for the first layer (see
-p.).
+ Questi valori sono anche stati compilati all' interno della procedura guidata, ma qui esiste anche la possibilità d' impostare la temperatura 
+per il primo strato (see p.).
 
-Printer Settings
+Impostazioni Stampante
 ----------------
 
-The `Printer Settings` will be updated the least, unless Slic3r is going
-to be used for many printers, for example, in a 3D printer farm.
+Le `Impostazioni Stampante`verranno variate il meno possibile, a meno che Slic3r venga utilizzato per diverse stampanti, per esempio, in un 
+centro di stampanti 3d.
 
  ![Simple Mode: Printer
 Settings.](images/simple_mode_printer_settings.png "fig:")
 
 
-#### Size and coordinates.
+#### Dimensioni e Coordinate.
 
  The `Bed size` setting is taken from the
 wizard (see p.) and is only used for previewing the model in the plater.
