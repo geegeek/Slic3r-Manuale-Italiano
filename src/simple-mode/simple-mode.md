@@ -2,7 +2,7 @@
 
 Slic3r ha due modalità di funzionamento, Semplificata e per Esperti. Queste possono essere scelte  dalla finestra delle `Preferenze` (che trovate sotto il menù `File`).
 
- ![Preferences.](images/preferences_general.png "fig:")
+ ![Preferenze.](images/preferences_general.png "fig:")
 
 
 La Modalità Semplificata offre un ridotto Insieme di opzioni, abbastanza per chi è alle prime armi che vuole iniziare. La modalità esperti dà maggiore controllo su come Slic3r produce il G-code e verrà meglio approfondita più avanti.
@@ -13,8 +13,7 @@ Impostazioni di Stampa
 La Scheda `Impostazioni di Stampa` fornisce la possibilità di modificare le impostazioni relative alla stampa attuale. Mentre le altre schede subiscono raramente cambiamenti,
 le impostazioni su questa scheda verranno modificate regolarmente, probabilmente per ogni modello stampato.
 
-[ht] ![Simple Mode: Print
-Settings.](images/simple_mode_print_settings.png "fig:")
+[ht] ![Modalità Semplificata: Impostazioni di Stampa.](images/simple_mode_print_settings.png "fig:")
 
 
 #### Generale.
@@ -39,8 +38,7 @@ layers.](images/bad_top_infill.jpg "fig:")
 
 Un altro consiglio da considerare: Impostare gli strati estremi superiori a zero, ed impostare anche un piempimento pari a zero, ciò si tradurra in un recipiente cavo, ideale per convertire i vostri modelli per esempio in vasi[^1]. Qui per esempio una manipolazione delle impostazioni all' interno di Slic3r può essere usata per generare differenti tipi di stampe, e non solo per controllare l' accuratezza di stampa.
 
- ![Creating a vase from a solid
-model.](images/solid_layers_vases.png "fig:")
+ ![Creazione di un vaso da un modello solido.](images/solid_layers_vases.png "fig:")
 
 
 #### Riempimento.
@@ -57,8 +55,7 @@ Scegliere uno `Schema di Riempimento` Dipenderà dal tipo di modello, dai deside
 
  Stampare un modello dal basso verso l' alto, con una tecnica come l' FDM, significa che ogni sbalzo significativo verrà stampato nell' aria, è più probabilmente cadrà materiale (nel vuoto) e non stamperà correttamente. Scegliere materiale di supporto (`Opzione: Generare materiale di Supporto`) aggiungerà strutture addizionali attorno al modello che si accumula per poi sostenere la parte strutturale sovrastante. L' opzione `Schema di spaziamento o Pattern spacing` determina quanto deso il materiale di supporto deve essere nel venire stampato.
 
- ![An example of an object printed with support
-material.](images/support_example.jpg "fig:")
+ ![Un esempio di oggestto stampato con il materiale di supporto.](images/support_example.jpg "fig:")
 
 
 Consiglio: Talvolta è opportuno considerare di modificare l' orientazione del modello in modo da diminuire le possibilità che si verifichino sbalzi nel vuoto. Ad esempio molti modelli disegnati per l' FDM sono concepiti per avere un lato di stampa ottimale per la riduzione di tale fenomeno.
@@ -203,19 +200,19 @@ extruder and bed. Note that if temperature control commands are
 specified (M104 and M190) then these will replace the temperature
 G-codes introduced by the `Filament` settings.
 
-Some common G-codes to use before the print starts are:
+Alcuni dei G-code utilizzati prima dell' inizio di una stampa sono:
 
--   **G28** - Homes all the axes.
+-   **G28** -  Porta la stampante all' Origine 'O' di tutti gli assi.
 
-Some common G-codes to use after the print ends are:
+Alcuni dei G-code utilizzati dopo il termine di una stampa sono:
 
--   **M104 S0** - Sets the extruder temperature to zero.
+-   **M104 S0** - Imposta la temperatura dell' estrusore a zero (disabilita il riscaldamento).
 
--   **M140 S0** - Sets the heated bed temperature to zero.
+-   **M140 S0** - Imposta il letto di stampa riscaldato a zero (disabilita il riscaldamento).
 
--   **G28 X0** - Home the X axis.
+-   **G28 X0** - Porta la stampante all' Origine 'O' del solo asse X.
 
--   **M84** - Disables the motors.
+-   **M84** - Disabilita i motori passo passo.
 
 [^1]: http://slic3r.org/blog/tip-printing-vases
 
