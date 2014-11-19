@@ -150,10 +150,9 @@ A meno che il materiale estruso abbia una viscosità molto alta esso può uscire
 Un valore tra 1 e 2mm è solitamente consigliato. Gli estrusori tipo Bowden potrebbero avere bisogno anche di 4 o 5mm a causa della isteresi introdotta dal tubo.
 Impostare il parametro `Lift Z` (ascensore Z) ad un valore positivo alzerà tutto il blocco estrusore sull' asse Z di quella quantità per ogni viaggio a vuoto. Questo può essere utile per assicurarsi che l' ugello durante i suoi movimenti non urti e quindi sposti nessun filamento già deposto. Un valore di 0.1mm è solitamente più che sufficiente.
 
-#### Start, End and Layer Chance G-codes.
+#### G-code di Inizio e Fine stampa.
 
-Custom G-code commands can be run before a print
-starts and after a print finishes.
+G-code personalizzati possono essere eseguiti prima dell' inizio di una stampa e successivamente dal suo termine.
 
 Placeholders can be inserted in the G-code commands[^2]. For example
 [next\_extruder] would return the index of the next extruder.
