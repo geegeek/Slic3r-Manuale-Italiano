@@ -125,19 +125,14 @@ Settings.](images/simple_mode_printer_settings.png "fig:")
 
 #### Dimensioni e Coordinate.
 
- The `Bed size` setting is taken from the
-wizard (see p.) and is only used for previewing the model in the plater.
+ L' impostazione `Dimensione letto di stampa` è anch' essa compilata durante la procedura guidata (vedi p.) e viene usata solo per la 
+visualizzazione dell' anteprima del modello in corso.
 
-The `Print center` is the point around which the print will be centered.
-A `Bed size` of 200mmx200mm and a `Print center` of 100mmx100mm would
-sit the print in the middle. Should it be desired to print away from the
-center, because of a scratch in the glass perhaps, then this option
-should be used.
+Il `Centro di Stampa` è il punto attorno al quale la stampa verrà centrata.
+Per un `Letto di Stampa` di 200mmx200mm ed un `Centro di Stampa` di 100mmx100mm posizionerà la stampa nel centro.
+Se di desiderasse stampare lontano dal centro, ad esempio a causa di un graffio sul vetro, allora si dovrebbe utilizzare questa opzione.
 
-`Z offset` can be used to compensate for an incorrectly calibrated Z
-end-stop. If the nozzle stops slightly too far from the bed, then adding
-a negative value will offset all layers by that amount. The correct
-solution however is to fix the end-stop itself.
+`Z offset` può essere utilizzata per compensare una errata calibrazione dell' interruttore di fine corsa dell' asse Z. Se l' augello si posiziona leggermente troppo lontano dal letto di stampa, allora aggiungere un valore negativo compenserà tutti gli strati mancanti di quella distanza. La soluzione corretta è comunque quella di correggere lo stesso interruttore di fine corsa.
 
 The optimal Z endstop position is where the nozzle tip barely touches
 the surface of the bed when homed. A sheet of paper makes a good gauge
