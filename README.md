@@ -11,4 +11,5 @@ Puoi leggere questo manuale in versione italiana all' indirizzo: http://hlcs.it,
 Copyleft 2013-2014
 License: CC-BY-SA 3.0
 
-(Questa scritta rappresenta il primo commit del collaboratore fioresarro su github.com. Sparirà appena presa dimestichezza con l'uso di github).
+
+
