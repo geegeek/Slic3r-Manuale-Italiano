@@ -1,22 +1,22 @@
 % Cooling
 
-Temperature plays a key part in determining print quality. Too hot and
-the material deforms, too cool and layer adhesion may be problematic.
-Applying cooling will allow the freshly deposited material to solidify
-enough to provide a good base for the next layer, helping with
-overhangs, small details and bridges.
+La Temperatura gioca un ruolo chiave nel determinare la qualità di stampa. Troppo caldo ed 
+il materiale si deformerà, troppo freddo e l' adesione tra gli strati risulterà problematica. 
+Applicare il raffreddamento permetterà al materiale appena depositato di solidificare 
+abbastanza da permettere una buona base per il prossimo strato, aiutando con 
+gli strapiombi, piccoli dettagli e ponti.
 
-There are two main techniques for cooling: adding a fan and slowing down
-the print speed. Slic3r may choose to use both techniques, using a fan
-first, and then slowing down the print if the layer time is too fast.
+Ci sono principalemte due tecniche per il reffreddamento: aggiungendo una ventola oppure rallentando 
+la velocità di stampa. Sclic3r potrebbe scegliere di utilizzare entrambe le tecniche, utilizzando in primo luogo
+la ventola, e rallentando la velocità di stampa se il tempo di deposito dello strato è troppo veloce.
 
  ![Cooling strategy.](images/cooling_chart.png "fig:")
 
 
-Figure  shows the strategy adopted by Slic3r.
-Reading from right to left, when the minimum fan threshold (\#2) is
-reached the fan is turned on. This increases in intensity as the layer
-time decreases. The print speed remains constant until the estimated
+La figura mostra la strategia adottata da Slic3r.
+Leggendo da destra verso sinistra, quando la soglia minima della ventola (\#2) è
+raggiunta la ventola viene spenta. Questa aumenta di intensità al diminuire del tempo di 
+deposito dello strato.Il tempo di stampa resta costante finchè il The print speed remains constant until the estimated
 print time drops below a certain threshold (\#1), this is when the print
 speed is reduced until it reaches it’s minimum value.
 
