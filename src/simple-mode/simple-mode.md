@@ -154,19 +154,19 @@ Impostare il parametro `Lift Z` (ascensore Z) ad un valore positivo alzerà tutt
 
 G-code personalizzati possono essere eseguiti prima dell' inizio di una stampa e successivamente dal suo termine.
 
-Placeholders can be inserted in the G-code commands[^2]. For example
-[next\_extruder] would return the index of the next extruder.
+Segnaposto possono essere inseriti nei comandi G-code [^2]. Per esempio
+[next\_extruder] restituirà l' indice del prossimo estrusore.
 
-The RepRap wiki is a good resource to learn about the variety of G-codes
-available: `http://reprap.org/wiki/G-code`.
+Il wiki di RepRap è un ottima risorsa dalla quale apprendere la varietà di G-code
+disponibili: `http://reprap.org/wiki/G-code`.
 
-Note: Be sure to check that a given G-code is valid for your firmware.
+Nota bene: Assicurati di controllare che un determinato G-code sia valido per il tuo firmware.
 
-The codes specified in `Start G-code` are inserted at the beginning of
-the output file, directly after the temperature control commands for
-extruder and bed. Note that if temperature control commands are
-specified (M104 and M190) then these will replace the temperature
-G-codes introduced by the `Filament` settings.
+I codici specificati in `Start G-code` verranno inseriti all' inizio
+del file di output, direttamente dopo i comandi di controllo della temperatura per
+l' estrusore ed il letto di stampa. Nota che se i comandi di controllo della temperatura vengono 
+specificati (M104 and M190) allora questi rimpiazzeranno i G-code di temperatura
+ introdotti dalle impostazioni del `Filament`.
 
 Alcuni dei G-code utilizzati prima dell' inizio di una stampa sono:
 
