@@ -16,7 +16,7 @@ la ventola, e rallentando la velocità di stampa se il tempo di deposito dello s
 La figura mostra la strategia adottata da Slic3r.
 Leggendo da destra verso sinistra, quando la soglia minima della ventola (\#2) è
 raggiunta la ventola viene spenta. Questa aumenta di intensità al diminuire del tempo di 
-deposito dello strato.Il tempo di stampa resta costante finchè il The print speed remains constant until the estimated
+deposito dello strato. Il tempo di stampa resta costante finchè il The print speed remains constant until the estimated
 print time drops below a certain threshold (\#1), this is when the print
 speed is reduced until it reaches it’s minimum value.
 
