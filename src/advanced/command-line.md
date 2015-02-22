@@ -25,13 +25,13 @@ Questo genererà un file denominato *mio_modello.gcode* nella stessa cartella
     slic3r mio_modello.stl --layer-height 0.2 --output /percorso/di/output.gcode
 
 
-The argument for `--output` can also be a directory; in that case the file
-will follow the automatic naming scheme (which you can override using the
-`--output-filename-format` option; see manual chapter about placeholders).
+L'argomento per `--output`può anche essere una cartella;in questo caso il file
+assumerà lo schema di nominazione automatica (che può essere sovrascritta utilizzando l'opzione
+`--output-filename-format` ; vedere il capitolo apposito).
 
-### Configuration
+### Configurazione
 
-**Note:** the print/filament/printer presets defined in the graphical interface
+**Nota:** the print/filament/printer presets defined in the graphical interface
 are completely ignored when running in command line mode. Slic3r will always
 default to its factory default settings.
 
