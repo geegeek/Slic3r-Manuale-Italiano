@@ -1,34 +1,29 @@
-% Command Line Usage
+% Utilizzo da Linea di Comanado
+Quasi tutte le caratteristiche di Slic3r possono essere accedute da linea di comando.Puoi quindi
+chiamare Slic3r come parte di uno script o installarlo su un sistema embedded o un server remoto.
 
-Almost all Slic3r features can be accessed from the command line. You can
-thus call Slic3r as part of a script or install it in an embedded system
-or headless server.
-
-To get the full listing and reference of available command line switches,
-just run:
+Per ottenere l'elenco completo ed i riferimenti dei comandi disponibili da linea
+di comando, basta eseguire:
 
     slic3r --help
 
-**Note:** you might need to replace `slic3r` with the name and/or path to the
-Slic3r executable which might be:
+**Nota:** potresti avere bisogno di sostituire `slic3r` con il nome e/o il percorsodell'eseguibile di Slic3r che potrebbe essere:
 
-* `slic3r-console.exe` on Windows
-* `slic3r` on GNU/Linux
-* `Slic3r.app/Contents/MacOS/slic3r` on MacOS X
-* `perl slic3r.pl` on all platforms if you're running from git/source code
+* `slic3r-console.exe` su Windows
+* `slic3r` su GNU/Linux
+* `Slic3r.app/Contents/MacOS/slic3r` su MacOS X
+* `perl slic3r.pl` su tutte le piattaforme, se si sta eseguendo da Git da codice sorgente.
 
-Generating G-code
+Generare G-code
 -----------------
-
-In order to slice a model into G-code you just need to supply the STL file
-along with any config option you'd like to use:
+Per convertire un modello in G-code hai bisogno di fornirgli il file STL, insieme a qualsiasi configurazione intendi utilizzare:
 
     slic3r my_model.stl --layer-height 0.2
+Questo genererà un file denominato *mio_modello.gcode* nella stessa cartella
+ del file STL di input. Si consiglia di specificare un percorso di output personalizzato:
 
-This will generate a file named *my_model.gcode* in the same directory as 
-the input STL file. You may want to specify a custom output path:
+    slic3r mio_modello.stl --layer-height 0.2 --output /percorso/di/output.gcode
 
-    slic3r my_model.stl --layer-height 0.2 --output /path/to/output.gcode
 
 The argument for `--output` can also be a directory; in that case the file
 will follow the automatic naming scheme (which you can override using the
