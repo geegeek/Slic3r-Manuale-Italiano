@@ -31,9 +31,7 @@ assumerà lo schema di nominazione automatica (che può essere sovrascritta util
 
 ### Configurazione
 
-**Nota:** the print/filament/printer presets defined in the graphical interface
-are completely ignored when running in command line mode. Slic3r will always
-default to its factory default settings.
+**Nota:**  le impostazioni base di stampa del filamento/stampante/stampa definite nell' interfaccia grafica vengono completamente ignorati quando si eseguono comandi nella modalità linea di comando. Slic3r verrà sempre settato alle sue impostazioni di default.
 
 You'll need to export your desired configuration with the *Export Config...*
 command, which is located in the *File* menu. It will prompt you to save a
