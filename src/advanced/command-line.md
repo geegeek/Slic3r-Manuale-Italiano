@@ -31,35 +31,35 @@ assumerà lo schema di nominazione automatica (che può essere sovrascritta util
 
 ### Configurazione
 
-**Nota:**  le impostazioni base di stampa del filamento/stampante/stampa definite nell' interfaccia grafica vengono completamente ignorati quando si eseguono comandi nella modalità linea di comando. Slic3r verrà sempre settato alle sue impostazioni di default.
+**Nota:**  le impostazioni base di stampa del filamento/stampa/stampante definite nell' interfaccia grafica vengono completamente ignorati quando si eseguono comandi nella modalità linea di comando. Slic3r verrà sempre settato alle sue impostazioni di default.
 
-You'll need to export your desired configuration with the *Export Config...*
-command, which is located in the *File* menu. It will prompt you to save a
-`.ini` file that you can load from command line this way:
+Avrai bisogno di esportare la tua configurazione desiderata con il comando *Export Config...*,
+che è collocato nel menu'*File*. Esso ti porterà a salvare un file `.ini` che potrai importare 
+da linea di comando in questo modo:
 
     slic3r my_model.stl --load my_config.ini
 
-You can override single options by appending them as command line switches:
+Tu puoi sovrascrivere singole opzioni aggiungendole alla fine del comando come linea di comando:
 
     slic3r my_model.stl --load my_config.ini --fill-pattern concentric
-
-You can also create a config file from command line:
+Puoi anche creare un file di configurazione da linea di comando:
 
     slic3r --nozzle-diameter 0.35 --filament-diameter 2.85 \
         --temperature 185 --first-layer-temperature 195 --layer-height 0.2 \
         --save my_config.ini
 
-If you're an advanced user you can split your configuration into multiple 
-*.ini* files and load them by appending multiple `--load` switches.
+Se sei un utente avanzato puoi suddividere le tue configurazioni in piu'
+file *.ini* e caricarli aggiungendo più comandi di `--load`.
 
-One more way to use the print/filament/printer presets on command line is
-launching Slic3r with the `--autosave` option:
+Uno o altri modi per usare le impostazioni base di stampa del filamento/stampa/stampante
+da linea di comando è avviando Slic3r con l'opzione  `--autosave` :
 
     slic3r --autosave my_config.ini
 
-The above command will launch the graphical interface of Slic3r but will
-automatically export the current configuration to the specified file. Thus,
-the last used presets will be remembered whenever you `--load` that file.
+Il comando sopra espresso avviera' l'interfaccia grafica di Slic3r but
+esporterà automaticamente la configurazione corrente dello specifico file.
+Quindi, l'ultima configurazione base verra' ricordata quando tu caricherai
+quel file con il comando `--load` .
 
 ### Processing multiple input files
 
