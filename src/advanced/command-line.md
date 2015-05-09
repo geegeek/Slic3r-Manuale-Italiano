@@ -61,36 +61,36 @@ esporterà automaticamente la configurazione corrente dello specifico file.
 Quindi, l'ultima configurazione base verra' ricordata quando tu caricherai
 quel file con il comando `--load` .
 
-### Processing multiple input files
+### Processare più file di input
 
-If you supply multiple input files Slic3r will process them separately, 
-by generating a distinct G-code file for each one:
+Se tu fornisci piu' file di input a Slic3r, esso li processeraà separatamente
+generando un distinto G-code per ogni file:
 
     slic3r model1.stl model2.stl model3.stl
 
-The command above will generate *model1.gcode*, *model2.gcode*,
+Il comando di sopra generera' *model1.gcode*, *model2.gcode*,
 *model3.gcode*.
 
-If you want to process multiple files as a single print job, you can use
-the `--merge` (or `-m`) option:
+Se tu vuoi processare più file come un singolo lavoro di stampa, tu puoi 
+utilizzare l'opzione `--merge` (o `-m`):
     
     slic3r -m model1.stl model2.stl model3.stl
 
-This will only generate a file named *model1.gcode* (but you can use the 
-`--output` option described above to set a custom name) containing all three
-objects. Note that auto-arranging currently works best when all objects have
-similar sizes.
+Questo genererà soltanto un nome file *model1.gcode* (ma tu puoi usare 
+l'opzione `--output` descritta sopra per impostare un nome personalizzato) 
+che contiene tutti e tre gli oggetti. Nopta che auto-arranging attualmente 
+funziona al meglio quando tutti gli oggetti hanno dimensioni simili.
 
-### Positioning files in the G-code coordinates
+### Posizionare i file nelle coordinate G-code
 
-Input file(s) will be centered around the G-code point defined by the
-`--print-center` option:
+I file di input (uno o più) verranno centrati attorno ad un punto di G-code definito
+dell'opzione `--print-center`:
 
     slic3r my_model.stl --print-center 40,40
 
-By default, the center point is set to 100,100.
+Di default, il punto di centro e' impostato a 100,100.
 
-Repairing models
+Riparando Modelli
 ----------------
 
 Slic3r can be used to repair files from command line:
