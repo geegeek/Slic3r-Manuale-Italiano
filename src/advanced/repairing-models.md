@@ -1,119 +1,108 @@
-% Repairing Models
+% Riparazione dei Modelli
 
-If the 3D mesh described in the model contains holes, or edges are
-misaligned (known as being non-manifold), then Slic3r may have problems
-working on it. Slic3r will attempt to fix any problems it can, but some
-problems are out of its reach. If the application complains that a model
-cannot be sliced correctly then there are several options available, and
-the ones described here are all free at the time of writing.
+Se la mesh 3D descritta nel modello contiene buchi o i bordi non sono
+allineati (condizione nota come non-manifold), Slic3r potrebbe avere
+problemi nell'elaborazione. Slic3r cercherà di risolvere eventuali problemi, ma alcuni
+potrebbero essere fuori dalla sua portata. Se l'applicazione segnala che un modello
+non può essere tagliato correttamente, esistono diverse opzioni disponibili, descritte
+qui di seguito, tutte gratuite al momento della stesura.
 
 #### Netfabb Studio
 
- Netfabb produce a range of 3D modelling
-applications, including a free basic version[^1]. This version includes
-a mesh repair module which can help eliminate the various problems
-faced. Up-to-date instructions can be found on the Netfabb wiki[^2], the
-following is a quick overview of the steps involved.
+Netfabb offre una gamma di applicazioni per la modellazione 3D, incluso
+un versione base gratuita[^1]. Questa versione include un modulo di riparazione
+delle mesh che può aiutare a eliminare vari problemi. Istruzioni aggiornate sono
+disponibili sul wiki di Netfabb[^2], di seguito un rapido riepilogo dei passaggi.
 
- ![Netfabb Studio: Part
-repair.](images/repair/netfabb_studio_part_repair.png "fig:")
+![Netfabb Studio: Riparazione
+della parte.](images/repair/netfabb_studio_part_repair.png "fig:")
 
+-   Avvia Netfabb Studio e carica il file STL problematico, utilizzando
+    il menu `File` o trascinandolo nell'area di lavoro. Se Netfabb rileva un
+    problema, mostrerà un'icona di avviso rosso nell'angolo in basso a destra.
 
--   Start Netfabb Studio, and load the problem STL file, either via the
-    `File` menu or by dragging and dropping it onto the workspace. If
-    Netfabb detects a problem it will show a red warning sign in the
-    bottom right-hand corner.
+-   Per avviare gli script di riparazione, seleziona la parte e clicca
+    sull'icona di pronto soccorso nella barra degli strumenti (la croce rossa),
+    oppure seleziona `Extras->Repair Part` dal menu contestuale. Si aprirà
+    la scheda di riparazione della parte che mostrerà lo stato del modello.
 
--   To run the repair scripts, select the part and then either click the
-    first aid icon in the toolbar (the red cross), or select from the
-    context menu `Extras->Repair Part`. This will open the part repair
-    tab and show the status of the model.
+-   Le schede `Actions` e `Repair scripts` offrono diversi script di riparazione
+    che possono essere applicati manualmente. Tuttavia, per questo riepilogo,
+    selezionare lo script di riparazione automatica risolverà la maggior parte
+    dei problemi.
 
--   The `Actions` and the `Repair scripts` tabs offer several repair
-    scripts which can be applied manually, however for the purposes of
-    this overview selecting the `Automatic repair` script will fix most
-    problems.
+-   Il pulsante di riparazione automatica presenta due opzioni: Default e
+    Simple. Scegliendo Default si copriranno la maggior parte dei casi.
+    Seleziona `execute` per eseguire gli script.
 
--   The automatic repair button presents two options: Default and
-    Simple. Choosing Default will cover most cases. Select `execute` to
-    run the scripts.
+-   Una volta completata la riparazione, i risultati devono essere applicati
+    selezionando `Apply repair`, scegliendo se sovrascrivere la parte esistente
+    o meno.
 
--   Once the part is repaired the repairs must be applied by selecting
-    `Apply repair`, choosing whether to override the existing part or
-    not.
+-   La parte può essere quindi esportata selezionando `Export part->As STL`
+    dal menu contestuale.
 
--   The part may then be exported by selecting `Export part->As STL`
-    from the context menu.
+-   Se Netfabb rileva ancora errori nella parte esportata, offrirà l'opzione
+    di applicare ulteriori riparazioni prima dell'esportazione.
 
--   If Netfabb still detects that the exported part will still contain
-    errors then it will provide the option to apply further repairs
-    before exporting.
+![Netfabb Studio: Esportazione
+della parte.](images/repair/netfabb_studio_export_part.png "fig:")
 
-     ![Netfabb Studio: Part
-    export.](images/repair/netfabb_studio_export_part.png "fig:")
-    
+#### Servizio Cloud di Netfabb
 
-#### Netfabb Cloud Service
+Netfabb ospita anche un servizio web in cui è possibile caricare un
+file STL per analizzarlo e ripararlo[^3].
 
- Netfabb also hosts a web service where an
-STL file may be uploaded for it to be checked and repaired[^3].
+![Servizi Cloud
+Netfabb.](images/repair/netfabb_cloud_services.png "fig:")
 
- ![Netfabb Cloud
-Services.](images/repair/netfabb_cloud_services.png "fig:")
+-   Vai a http://cloud.netfabb.com
 
+-   Scegli il file STL da caricare utilizzando il pulsante fornito.
 
--   Navigate to http://cloud.netfabb.com
+-   Inserisci un indirizzo email per essere informato quando il servizio
+    avrà terminato.
 
--   Choose the STL file to upload using the button provided.
+-   Scegli se utilizzare misure metriche o imperiali.
 
--   An email address must be given to inform you when the service is
-    finished.
-
--   Choose whether metric or imperial measurements should be used.
-
--   Read and accept the terms of service, and then click
+-   Leggi e accetta i termini di servizio, quindi clicca su
     `Upload to Cloud`.
 
--   Once the service has analysed and repaired the file an email is sent
-    providing the download link to the repaired file.
+-   Una volta che il servizio ha analizzato e riparato il file, riceverai un'email
+    con il link per scaricare il file riparato.
 
 #### FreeCAD
 
+FreeCAD[^4] è un programma CAD completo e gratuito che include un modulo
+per le mesh, utile per riparare modelli degenerati. Di seguito i passaggi
+per analizzare e riparare un modello problematico.
 
+![FreeCAD Riparazione
+della parte.](images/repair/freecad_part_repair.png "fig:")
 
-Freecad[^4] is a comprehensive, and free, CAD program which comes with a
-mesh module, in which repairs to degenerate models can be made. the
-following steps outline how a problem model file can be analysed and
-repaired.
-
- ![FreeCAD part
-repair.](images/repair/freecad_part_repair.png "fig:")
-
-
--   Start FreeCAD and from the start splash page choose
+-   Avvia FreeCAD e dalla schermata iniziale scegli
     `Working with Meshes`.
 
--   Load the model by dragging and dropping it onto the workspace or via
-    the `File` menu. A small message in the bottom left corner will
-    indicate if the model appears to have problems.
+-   Carica il modello trascinandolo nell'area di lavoro o utilizzando
+    il menu `File`. Un piccolo messaggio nell'angolo in basso a sinistra indicherà
+    se il modello presenta problemi.
 
--   From the menu choose `Meshes->Analyze->Evaluate & Repair mesh` to
-    bring up the repair options dialog.
+-   Dal menu, seleziona `Meshes->Analyze->Evaluate & Repair mesh` per
+    aprire la finestra di dialogo con le opzioni di riparazione.
 
--   From the options dialog choose the loaded mesh, then perform each
-    analysis be clicking the `Analyze` button by each problem type, or
-    select `Repetitive Repair` at the bottom to perform all checks. If a
-    corresponding problem is detected the `Repair` button becomes
-    enabled.
+-   Nella finestra di dialogo seleziona la mesh caricata, quindi esegui
+    ogni analisi cliccando sul pulsante `Analyze` per ciascun tipo di problema,
+    oppure seleziona `Repetitive Repair` in basso per eseguire tutti i controlli.
+    Se viene rilevato un problema corrispondente, il pulsante `Repair` diventa
+    disponibile.
 
--   For each desired repair hit the `Repair` button.
+-   Per ogni riparazione desiderata, premi il pulsante `Repair`.
 
--   It is important to review the effect the repair script has made to
-    the model. It may be the case that the script damages the file,
-    rather than repair, for example by removing important triangles.
+-   È importante rivedere l'effetto dello script di riparazione sul modello.
+    Potrebbe accadere che lo script danneggi il file anziché ripararlo, ad esempio
+    rimuovendo triangoli importanti.
 
--   Export the repaired model via the `Export` menu option or context
-    menu.
+-   Esporta il modello riparato tramite l'opzione di menu `Export` o il menu contestuale.
 
 [^1]: http://www.netfabb.com/basic.php
 
