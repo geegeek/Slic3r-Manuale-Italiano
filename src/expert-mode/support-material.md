@@ -1,64 +1,30 @@
-% Support Material
+% Materiale di Supporto
 
-Generally, most 3D models will print with overhanging parts by up to a
-certain degree. The angle is determined by several factors, most notably
-layer height and extrusion width, and is usually around 45°. For models
-with larger overhangs a support structure may have to be printed below
-it. This incurs the use of more material, longer print times, and post
-printing clean-up.
+In generale, la maggior parte dei modelli 3D può essere stampata con parti sporgenti fino a un certo angolo. L'angolo è determinato da diversi fattori, in particolare l'altezza del layer e la larghezza dell'estrusione, ed è solitamente intorno ai 45°. Per modelli con sporgenze più ampie, potrebbe essere necessario stampare una struttura di supporto sotto di esse. Questo comporta un maggiore utilizzo di materiale, tempi di stampa più lunghi e un'operazione di pulizia post-stampa.
 
- ![Support structure
-options.](images/support/advanced_support.png "fig:")
+![Opzioni per le strutture di supporto.](images/support/advanced_support.png "fig:")
 
+Per iniziare, attiva l'opzione per il materiale di supporto selezionando la casella `Genera materiale di supporto`. Impostare un valore pari a zero nel parametro `Soglia per le sporgenze` indica a Slic3r di rilevare automaticamente le aree in cui fornire supporto; in alternativa, verrà utilizzato il valore di angolo specificato. La generazione del supporto è un argomento relativamente complesso e ci sono diversi aspetti che determinano il supporto ottimale. È fortemente consigliato impostare la soglia a zero e lasciare che Slic3r determini il supporto necessario.
 
-The first thing to do is activate the support material option by
-checking the `Generate support material` box. Providing a value of zero
-to the `Overhang threshold` parameter tells Slic3r to detect places to
-provide support automatically, otherwise the degrees given will be used.
-Support generation is a relatively complex topic, and there are several
-aspects which determine the optimal support, it is strongly recommended
-to set the threshold to zero and allow Slic3r to determine the support
-required.
+Modelli piccoli, o quelli con una base ridotta, possono talvolta rompersi o staccarsi dal piano di stampa. L'opzione `Forza supporto` consente di stampare strutture di supporto per un numero specifico di layer, indipendentemente dal valore della soglia di angolo.
 
-Small models, and those with small footprints, can sometimes break or
-detach from the bed. Therefore the `Enforce support` option will cause
-support structures to be printed for the given number of layers,
-regardless of the angle threshold value.
+Per dimostrare i pattern di riempimento, il modello di una minimug è stato inclinato di 45° lungo l'asse X, come mostrato in figura.
 
-To demonstrate the infill patterns the minimug model was tilted by 45°
-along the x axis, as shown in figure .
+![Modello minimug inclinato di 45°.](images/support/support_minimug_45deg.png "fig:")
 
- ![Minimug model, tilted
-45°.](images/support/support_minimug_45deg.png "fig:")
+Come per il riempimento, ci sono diversi pattern disponibili per le strutture di supporto.
 
+- **Rectilinear**  
+  ![Pattern di supporto: Rectilinear](images/support/support_pattern_rectlinear.png "fig:")
 
-As with infill, there are several patterns available for the support
-structure.
+- **Rectilinear Grid**  
+  ![Pattern di supporto: Rectilinear Grid](images/support/support_pattern_rectlinear_grid.png "fig:")
 
- ![Support infill pattern:
-Rectilinear](images/support/support_pattern_rectlinear.png "fig:")
+- **Honeycomb**  
+  ![Pattern di supporto: Honeycomb](images/support/support_pattern_honeycomb.png "fig:")
 
+`Distanza del Pattern` determina la distanza tra le linee del supporto ed è simile alla densità del riempimento, ma viene definita solo in mm. Quando si modifica questo attributo, è importante considerare la larghezza dell'estrusione del supporto e la quantità di materiale di supporto che aderirà all'oggetto.
 
- ![Support infill pattern: Rectilinear
-Grid](images/support/support_pattern_rectlinear_grid.png "fig:")
+È importante scegliere un pattern di supporto che si adatti al modello, in modo che il materiale di supporto si attacchi perpendicolarmente alla parete dell'oggetto, piuttosto che parallelamente, rendendo più facile la rimozione. Se la struttura di supporto corre lungo la lunghezza di una parete, l'opzione `Angolo del Pattern` consente di ruotare la direzione delle linee di supporto.
 
-
- ![Support infill pattern:
-Honeycomb](images/support/support_pattern_honeycomb.png "fig:")
-
-
-`Pattern Spacing` determines the distance between support lines, and is
-akin to infill density apart from being defined only in mm. If changing
-this attribute take into account the width of the support extrusion and
-the amount of support material that will adhere to the object.
-
-Care should be taken to choose a support pattern which matches the
-model, where the support material attaches perpendicularly to the wall
-of the object, rather than in parallel, so it will be easy to remove. If
-the support structure does run along the length of a wall then the
-`Pattern Angle` option allows the direction of the support lines to be
-rotated.
-
- ![Example of pattern angle rotated
-45°.](images/support/support_pattern_rectlinear_rotated.png "fig:")
-
+![Esempio di angolo del pattern ruotato di 45°.](images/support/support_pattern_rectlinear_rotated.png "fig:")
