@@ -1,16 +1,10 @@
-% Printing
+% Stampa
 
-At this stage Slic3r has been configured and a model has been acquired,
-sliced and made ready for print. Now would be the time to fire up the
-printer and try it out.
+A questo punto, Slic3r è stato configurato e un modello è stato acquisito, tagliato e preparato per la stampa. Ora è il momento di avviare la stampante e provarla.
 
-A variety of host software is available to send the G-code to the
-printer. Amongst the open-source solutions are: Printrun[^1],
-Repetier[^2] and Repsnapper[^3].
+È disponibile una varietà di software host per inviare il G-code alla stampante. Tra le soluzioni open-source ci sono: Printrun[^1], Repetier[^2] e Repsnapper[^3].
 
-The following sections will cover the options available in expert mode,
-and look at advanced printing techniques, including special cases and
-troubleshooting.
+Le sezioni seguenti copriranno le opzioni disponibili in modalità esperto e esamineranno tecniche di stampa avanzate, inclusi casi speciali e risoluzione dei problemi.
 
 [^1]: https://github.com/kliment/Printrun
 
