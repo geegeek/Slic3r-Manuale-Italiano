@@ -1,36 +1,23 @@
-% Calibration
+% Calibrazione
 
-Before even attempting the first print it is vital that the printer is
-correctly calibrated. Skipping or rushing this step will result in
-frustration and failed prints later, so it is important to take the time
-to make sure the machine is correctly set up.
+Prima di tentare la prima stampa, è fondamentale che la stampante sia calibrata correttamente. Saltare o affrettare questo passaggio porterà a frustrazione e stampe fallite in seguito, quindi è importante dedicare il tempo necessario per assicurarsi che la macchina sia configurata correttamente.
 
-Each machine may have it’s own calibration procedure and this manual
-will not attempt to cover all the variations. Instead here is a list of
-key points that should be addressed.
+Ogni macchina può avere la propria procedura di calibrazione e questo manuale non tenterà di coprire tutte le varianti. Di seguito, però, è riportato un elenco dei punti chiave che devono essere affrontati:
 
--   Frame is stable and correctly aligned.
+-   Il telaio è stabile e correttamente allineato.
 
--   Belts are taut.
+-   Le cinghie sono ben tese.
 
--   Bed is level in relation to the path of the extruder.
+-   Il piano di stampa è livellato rispetto al percorso dell'estrusore.
 
--   Filament rolls freely from the spool, without causing too much
-    tension on the extruder.
+-   Il filamento si svolge liberamente dalla bobina senza causare troppa tensione sull'estrusore.
 
--   Current for stepper motors is set to the correct level.
+-   La corrente per i motori stepper è impostata al livello corretto.
 
--   Firmware settings are correct including: axis movement speeds and
-    acceleration; temperature control; end-stops; motor directions.
+-   Le impostazioni del firmware sono corrette, inclusi: velocità di movimento degli assi e accelerazione; controllo della temperatura; finecorsa; direzione dei motori.
 
--   Extruder is calibrated in the firmware with the correct steps per mm
-    of filament.
+-   L'estrusore è calibrato nel firmware con il corretto numero di passi per mm di filamento.
 
-The point regarding the extruder step rate is vital. Slic3r expects that
-the machine will accurately produce a set amount of filament when told
-to do so. Too much will result in blobs and other imperfections in the
-print. Too little will result in gaps and poor inter-layer adhesion.
+Il punto relativo al numero di passi dell'estrusore è cruciale. Slic3r si aspetta che la macchina estruda una quantità precisa di filamento quando richiesto. Una quantità eccessiva porterà a blob e altre imperfezioni nella stampa. Una quantità insufficiente causerà spazi vuoti e scarsa adesione tra i layer.
 
-Please refer to the printer documentation and/or resources in the 3D
-printing community for details on how best to calibrate a particular
-machine.
+Si prega di consultare la documentazione della stampante e/o le risorse della comunità di stampa 3D per dettagli su come calibrare al meglio una determinata macchina.
