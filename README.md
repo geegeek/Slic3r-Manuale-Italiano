@@ -1,6 +1,6 @@
 # Slic3r Manuale ITALIANO
 
-(Il testo è in fase di traduzione in italiano. A coloro che vogliono collaborare si richiede di NON usare traduttori automatici del testo.)
+(Il testo è stato tradotto in italiano. A coloro che vogliono collaborare si richiede di NON usare traduttori automatici del testo.)
 
 La prima versione del manuale è stata sponsorizzata da Lulzbot - Aleph Objects, Inc. e scritta da Gary Hodgson. 
 
