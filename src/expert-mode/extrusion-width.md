@@ -1,26 +1,15 @@
-% Extrusion Width
+% Larghezza di Estrusione
 
- ![Extrusion widths
-options.](images/advanced_extrusion_widths_options.png "fig:")
+![Opzioni di larghezza di estrusione.](images/advanced_extrusion_widths_options.png "fig:")
 
+Un motivo per modificare la larghezza di estrusione è già stato discusso: aumentare la larghezza di estrusione del primo layer per migliorare l'adesione al piano di stampa (vedi p.). Ci sono altri casi in cui può essere utile modificare le larghezze di estrusione.
 
-One reason for modifying the extrusion width has already been discussed:
-increasing first layer extrusion width in order to improve bed adhesion
-(see p.). There are some further cases where it may be beneficial to
-modify extrusion widths.
+-   **Perimetro** - Un valore più basso produrrà estrusioni più sottili, che a loro volta garantiranno superfici più accurate.
 
--   `Perimeter` - A lower value will produce thinner extrusions which in
-    turn will produce more accurate surfaces.
+-   **Riempimento** e **Riempimento Solido** - Un'estrusione più spessa per il riempimento consentirà stampe più rapide e parti più robuste.
 
--   `Infill` and `Solid Infill` - A thicker extrusion for infill will
-    produce faster prints and stronger parts.
+-   **Riempimento Superiore** - Un'estrusione più sottile migliorerà la finitura superficiale e garantirà che gli angoli siano riempiti correttamente.
 
--   `Top infill` - A thinner extrusion will improve surface finish and
-    ensure corners are tightly filled.
+-   **Materiale di Supporto** - Come per le opzioni di riempimento, un'estrusione più spessa ridurrà il tempo di stampa.
 
--   `Support material` - As with the infill options, a thicker extrusion
-    will speed up print time.
-
-It is important to remember that if the extrusion width is expressed as
-a percentage then this is computed from the `Layer height` property, and
-not the `Default extrusion width` setting.
+È importante ricordare che se la larghezza di estrusione è espressa come percentuale, questa viene calcolata sulla base della proprietà `Altezza del layer` e non sull'impostazione di `Larghezza di estrusione predefinita`.
