@@ -1,46 +1,19 @@
-% Infill Optimization
+% Ottimizzazione del Riempimento
 
-Slic3r contains several advanced infill settings which can help produce
-better extrusions.
+Slic3r offre diverse impostazioni avanzate per il riempimento che possono aiutare a migliorare la qualità delle estrusioni.
 
- ![Infill advanced
-settings.](images/infill_advanced_settings.png "fig:")
+![Impostazioni avanzate del riempimento.](images/infill_advanced_settings.png "fig:")
 
+-   **Riempire ogni n layer** - Produce un riempimento verticale sparso saltando un numero specifico di layer. Questo può essere utile per ridurre i tempi di stampa quando il riempimento mancante è accettabile.
 
--   `Infill every n layers` - Will produce sparse vertical infill by
-    skipping a set number of layers. This can be used to speed up print
-    times where the missing infill is acceptable.
+-   **Riempire solo dove necessario** - Slic3r analizzerà il modello e determinerà dove è richiesto il riempimento per supportare soffitti interni e sporgenze. Utile per ridurre tempo e materiali.
 
--   `Only infill where needed` - Slic3r will analyse the model and
-    choose where infill is required in order to support internal
-    ceilings and overhangs. Useful for reducing time and materials.
+-   **Riempimento solido ogni n layer** - Forza un pattern di riempimento solido sui layer specificati. Impostare a zero per disabilitare questa opzione.
 
--   `Solid infill every n layers` - Forces a solid fill pattern on the
-    specified layers. Zero will disable this option.
+-   **Angolo di riempimento** - Di default, il pattern di riempimento è orientato a 45° rispetto al modello per garantire la migliore adesione alle strutture delle pareti. Le estrusioni di riempimento che corrono adiacenti ai perimetri possono delaminarsi sotto stress. Alcuni modelli potrebbero beneficiare della rotazione dell'angolo di riempimento per ottimizzare la direzione dell'estrusione.
 
--   `Fill angle` - By default the infill pattern runs at 45° to the
-    model to provide the best adhesion to wall structures. Infill
-    extrusions that run adjacent to perimeters are liable to de-laminate
-    under stress. Some models may benefit from rotating the fill angle
-    to ensure the optimal direction of the extrusion.
+-   **Area soglia per riempimento solido** - Piccole aree all'interno del modello sono generalmente meglio riempite completamente per garantire integrità strutturale. Tuttavia, ciò richiederà più tempo e materiale e potrebbe rendere alcune parti inutilmente solide. Regola questa opzione per bilanciare queste esigenze.
 
--   `Solid infill threshold area` - Small areas within the model are
-    usually best off being filled completely to provide structural
-    integrity. This will however take more time and material, and can
-    result in parts being unnecessarily solid. Adjust this option to
-    balance these needs.
+-   **Retrarre solo attraversando i perimetri** - La retrazione, per prevenire l'oozing, non è necessaria se l'estrusore rimane entro i confini del modello. Tuttavia, se il materiale di stampa tende a oozing eccessivo, non retrarre potrebbe causare una perdita di materiale sufficiente a compromettere la qualità dell'estrusione successiva. La maggior parte delle stampanti e dei materiali moderni non soffre di problemi di oozing così estremi.
 
--   `Only retract when crossing perimeters` - Retracting, to prevent
-    ooze, is unnecessary if the extruder remains within the boundaries
-    of the model. Care should be taken if the print material oozes
-    excessively, as not retracting may result in enough material loss to
-    affect the quality of the subsequent extrusion. However, most modern
-    printers and materials rarely suffer from such extreme ooze
-    problems.
-
--   `Infill before perimeters` - Reverses the order in which the layer
-    is printed. Usually the perimeter is laid down initially, followed
-    by the infill, and this is usually the preferable as the perimeter
-    acts as a wall containing the infill.
-
-
+-   **Riempimento prima dei perimetri** - Inverte l'ordine di stampa del layer. Solitamente, il perimetro viene posato inizialmente, seguito dal riempimento, e questo è preferibile poiché il perimetro funge da parete contenitiva per il riempimento.
