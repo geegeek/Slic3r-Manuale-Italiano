@@ -1,59 +1,28 @@
-% Configuration Organization
+% Organizzazione delle Configurazioni
 
-There are two ways in which to organise the configuration settings:
-exporting and importing the configuration settings, and profiles. The
-former is available in both simple and expert mode, whereas profiles is
-only available in expert mode.
+Esistono due modi per organizzare le impostazioni di configurazione: l'esportazione e l'importazione delle impostazioni di configurazione, e i profili. Il primo metodo è disponibile sia in modalità semplice che in modalità esperto, mentre i profili sono disponibili solo in modalità esperto.
 
-Exporting and Importing Configuration
-=====================================
+Esportare e Importare la Configurazione
+=======================================
 
+L'insieme corrente di opzioni di configurazione può essere esportato semplicemente tramite l'opzione di menu ```Export Config```. Questo salverà tutti i valori in un file di testo con estensione ```.ini```. I file precedentemente salvati possono essere caricati con l'opzione di menu ```Load Config```.
 
+Questo fornisce un metodo rudimentale per memorizzare diverse impostazioni di configurazione per necessità differenti. Ad esempio, un set con velocità di stampa leggermente più alte oppure un pattern di riempimento differente. Tuttavia, questo modo di organizzare le cose diventerà rapidamente frustrante, perché ogni modifica minore a un parametro potrebbe dover essere duplicata su molte configurazioni. Per questo motivo, i profili sono un modo più adatto per gestire più configurazioni.
 
-The current set of configuration options can be simply exported via the
-`Export Config` File menu option. This saves all the values into a text
-file with a `.ini` extension. Previously saved files can be loaded with
-the `Load Config` menu option.
+Questo metodo permette anche di trasferire la configurazione tra macchine diverse o di memorizzarla in remoto.
 
-This gives a rudimentary means to store different configuration settings
-for different needs. For example a set with slightly faster print
-speeds, or a different infill pattern. However this way of organising
-things will quickly become frustrating, as each minor change to a
-parameter may have to be duplicated across many configurations. For this
-reason, profiles are a more suitable way of managing multiple
-configurations.
+Profili
+=======
 
-This method also allows configuration to be transferred between
-machines, or stored remotely.
+Dopo qualche stampa, diventerà evidente che vale la pena avere un set di opzioni di configurazione tra cui scegliere, e che alcuni parametri cambiano con frequenze diverse rispetto ad altri. In modalità esperto è possibile creare profili per le impostazioni di Stampa (Print), Filamento (Filament) e Stampante (Printer), partendo dal presupposto che le impostazioni della stampante cambino meno frequentemente, quelle del filamento raramente, mentre le impostazioni di stampa possano cambiare per ogni modello. Questi profili possono essere combinati a piacere e selezionati sia nelle rispettive schede sia direttamente dal plater.
 
-Profiles
-========
+Creare Profili
+--------------
 
+Apri la scheda desiderata e modifica le impostazioni secondo necessità. Una volta soddisfatto, fai clic sull'icona di salvataggio sulla sinistra, sopra i titoli delle impostazioni, e inserisci un nome appropriato quando richiesto.
 
+![Salvataggio di un profilo.](images/creating_a_profile.png "fig:")
 
-After a few prints it will become apparent that it is worth having a set
-of configuration options to choose from, and that some parameters change
-at different rates as others. In expert mode, profiles can be created
-for Print, Filament and Printer settings, with the expectation that the
-printer settings change least often, filament rarely, and the print
-settings could be changed for each model. These different profiles can
-be mixed and matched as desired, and can be selected either in their
-respective tabs, or directly from the plater.
+I profili possono essere eliminati selezionando il profilo da cancellare e cliccando sul pulsante rosso di eliminazione accanto al pulsante di salvataggio.
 
-Creating Profiles
------------------
-
-
-
-Open the desired tab and change the settings as necessary. Once
-satisfied, click the save icon to the left above the setting titles, and
-give a suitable name when prompted.
-
- ![Saving a profile.](images/creating_a_profile.png "fig:")
-
-
-Profiles can be deleted by choosing the profile to delete and clicking
-the red delete button next to the save button.
-
- ![Deleting a profile.](images/deleting_a_profile.png "fig:")
-
+![Eliminazione di un profilo.](images/deleting_a_profile.png "fig:")
