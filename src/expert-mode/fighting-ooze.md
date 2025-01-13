@@ -1,76 +1,31 @@
-% Fighting Ooze
+% Combattere l'Oozing
 
-Unless the material being extruded has a very high viscosity it will
-ooze from the nozzle in between extrusions. There are several settings
-in Slic3r to which can help to remedy this.
+A meno che il materiale estruso non abbia una viscosità molto alta, tenderà a fuoriuscire dall'ugello tra le estrusioni. Slic3r offre diverse impostazioni che possono aiutare a risolvere questo problema.
 
-The retraction settings, found in the `Printer` tab, tell the printer to
-pull back the filament between extrusion moves. This can alleviate the
-pressure in the nozzle, thus reducing ooze. After the subsequent travel
-move the retraction is reversed to prepare the extruder for the next
-extrusion.
+Le impostazioni di retrazione, nella scheda `Stampante`, indicano alla stampante di tirare indietro il filamento tra i movimenti di estrusione. Questo allevia la pressione nell'ugello, riducendo così l'oozing. Dopo il movimento successivo, la retrazione viene annullata per preparare l'estrusore alla prossima estrusione.
 
- ![Retraction settings.](images/retraction_settings.png "fig:")
+![Impostazioni di retrazione.](images/retraction_settings.png "fig:")
 
+-   **Lunghezza** - Il numero di millimetri di filamento da retrarre. Nota che la misura viene presa dal filamento grezzo che entra nell'estrusore. Si consiglia un valore tra 1 e 2 mm. Gli estrusori Bowden potrebbero necessitare di 4 o 5 mm a causa dell'isteresi introdotta dal tubo.
 
--   `Length` - The number of millimeters to retract. Note that the
-    measurement is taken from the raw filament entering the extruder. A
-    value of between 1 and 2mm is usually recommended. Bowden extruders
-    may need up to 4 or 5mm due to the hysteresis introduced by the
-    tube.
+-   **Sollevamento Z** - Solleva l'intero estrusore sull'asse Z di un determinato numero di millimetri durante ogni spostamento. Questo può essere utile per evitare che l'ugello tocchi il filamento già posato, ma di solito non è necessario e rallenta la stampa. Un valore di 0,1 mm è solitamente sufficiente.
 
--   `Lift Z` - Raises the entire extruder on the Z axis by that many
-    millimeters during each travel. This can be useful to ensure the
-    nozzle will not catch on any already laid filament, however it is
-    usually not necessary and will slow the print speed. A value of
-    0.1mm is usually sufficient.
+-   **Velocità** - La velocità con cui il motore dell'estrusore ritrae il filamento. Questo valore dovrebbe essere il più veloce possibile senza che il motore perda passi. Vale la pena sperimentare per trovare la velocità di retrazione ottimale.
 
--   `Speed` - The speed at which the extruder motor will pull back the
-    filament. The value should be set to as quick as the extruder can
-    handle without skipping steps, and it is worth experimenting with
-    this value to find the quickest retraction possible.
+-   **Lunghezza extra al riavvio** - Aggiunge una lunghezza extra di filamento dopo la retrazione compensata dal movimento. Questa impostazione è raramente usata, ma può essere utile aggiungere una piccola quantità di materiale se la stampa mostra segni di carenza di materiale dopo i movimenti.
 
--   `Extra length on restart` - Adds an extra length of filament after
-    the retraction is compensated after the travel move. This setting is
-    rarely used, however should the print show signs of not having
-    enough material after travel moves then it may be useful to add a
-    small amount of additional material.
+-   **Spostamento minimo dopo retrazione** - Eseguire una retrazione dopo movimenti molto brevi è di solito inutile poiché l'oozing è insignificante e rallenta i tempi di stampa. Imposta la distanza minima in millimetri che l'ugello deve percorrere prima di considerare una retrazione. Se la stampante gestisce bene l'oozing, questo valore può essere aumentato a 5 o 6 mm.
 
--   `Minimum travel after retraction` - Triggering a retraction after
-    very short moves is usually unnecessary as the amount of ooze is
-    usually insignificant and it slows down the print times. Set the
-    number of millimeters minimum distance the nozzle must move before
-    considering a retraction. If the printer handles ooze well this can
-    be increased to 5 or 6mm.
+-   **Retrarre al cambio di layer** - Il movimento lungo l'asse Z deve essere considerato per evitare la formazione di blob. Si consiglia di lasciare attiva questa impostazione.
 
--   `Retract on layer change` - Movement along the Z axis must also be
-    considered when dealing with oozing, otherwise blobs may occur. It
-    is recommended to leave this setting on.
+-   **Pulire prima della retrazione** - Sposta l'ugello durante la retrazione per ridurre le possibilità di formazione di blob.
 
--   `Wipe before retract` - Moves the nozzle whilst retracting so as to
-    reduce the chances of a blob forming.
+Inoltre, nella scheda `Stampa` ci sono impostazioni aggiuntive per controllare l'oozing:
 
-Additionally there are several settings in the `Print` tab which can
-help control oozing.
+-   **Retrarre solo quando si attraversano i perimetri** (Riempimento) - Indica a Slic3r di retrarre solo se l'ugello attraverserà i bordi dell'isola corrente in estrusione. Piccole quantità di oozing all'interno delle pareti possono essere tollerate.
 
--   `Only retract when crossing perimeters` (Infill) - Tells Slic3r to
-    only retract if the nozzle will cross the threshold of the current
-    island being extruded. Slight ooze within the walls of a part are
-    not seen and can usually be accepted.
+-   **Evitare di attraversare i perimetri** (Layer e perimetri - Avanzato) - Forza l'ugello a seguire i perimetri il più possibile per minimizzare il numero di volte in cui li attraversa, muovendosi tra e dentro le isole. Questo ha un impatto negativo sui tempi di generazione del G-code e di stampa.
 
--   `Avoid crossing perimeters` (Layers and perimeters - Advanced) -
-    Will force the nozzle to follow perimeters as much as possible to
-    minimise the number of times it must cross them when moving around,
-    and between, islands. This has a negative impact on both G-code
-    generation and print times.
+-   **Punti di partenza casuali** (Layer e perimetri - Gusci verticali) - Quando l'estrusore si sposta all'inizio di un nuovo layer, l'oozing può causare blob. Se lo stesso punto di partenza viene usato per ogni layer, si può formare una cucitura lungo l'oggetto. Questa impostazione sposta il punto di partenza in una posizione diversa per ogni layer.
 
--   `Randomize starting points` (Layers and perimeters - Vertical
-    shells) - As the extruder moves up to the start of the next layer
-    any ooze can result in blobs. If the same start point is used for
-    every layer then a seam can form the length of the object. This
-    setting will move the start point to a difference location for each
-    layer.
-
-See also section : Sequential Printing
-for another technique which can minimise strings forming between
-objects.
+Vedi anche la sezione **Stampa Sequenziale** per un'altra tecnica utile a minimizzare la formazione di fili tra gli oggetti.
