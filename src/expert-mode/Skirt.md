@@ -1,25 +1,23 @@
 % Skirt
 
-The `Skirt` setting adds an extrusion a short distance away from the
-perimiter of the object. This can ensure that the material is flowing
-smoothly from the extruder before it starts on the model proper.
+L'impostazione `Skirt` aggiunge un'estrusione a una breve distanza dal perimetro
+dell'oggetto. Questo serve a garantire che il materiale fluisca senza problemi
+dall'estrusore prima di iniziare a stampare il modello vero e proprio.
 
- ![Skirt settings.](images/skirt_settings.png "fig:")
+![Impostazioni Skirt.](images/skirt_settings.png "fig:")
 
+-   **Loops** - Il numero di circuiti che devono essere completati prima
+    di iniziare sul modello. Un loop è solitamente sufficiente.
 
--   `Loops` - How many circuits should be completed before starting on
-    the model. One loop is usually sufficient.
+-   **Distanza dall'oggetto** - I millimetri tra l'oggetto e lo skirt. Il
+    valore predefinito di 6mm è generalmente adeguato.
 
--   `Distance from object` - The millimeters between the object and the
-    skirt. The default of 6mm is usually sufficient.
+-   **Altezza dello skirt** - Il numero di layer per i quali lo skirt
+    deve essere posato. Per garantire che il materiale fluisca
+    correttamente, un layer è sufficiente. Tuttavia, la funzione skirt
+    può essere utilizzata anche per costruire pareti attorno all'oggetto
+    nel caso in cui debba essere protetto dalle correnti d'aria.
 
--   `Skirt height` - The number of layers to lay down a skirt for. For
-    ensuring the material is flowing smoothly, one layer is sufficient,
-    however the skirt function can also be used to build walls around
-    the object in case it should be protected from draughts.
-
--   `Minimum extrusion length` - Dictates a minimum number of
-    millimeters that the skirt should be, should the loop around the
-    object not be enough.
-
-
+-   **Lunghezza minima di estrusione** - Determina un numero minimo di
+    millimetri che lo skirt deve avere, nel caso in cui il loop attorno
+    all'oggetto non sia sufficiente.
