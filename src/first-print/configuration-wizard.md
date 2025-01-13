@@ -1,131 +1,63 @@
-% Configuration Wizard
+% Procedura Guidata di Configurazione
 
-Slic3r has two features to aid newcomers: the configuration wizard, and
-simple mode.
+Slic3r offre due funzionalità per aiutare i nuovi utenti: la procedura guidata di configurazione e la modalità semplice.
 
-Sometimes it is nice to have a helping hand when starting out with new
-software. The configuration wizard asks a series of questions and
-creates a configuration for Slic3r to start with.
+A volte è utile avere una mano quando si inizia a utilizzare un nuovo software. La procedura guidata di configurazione pone una serie di domande e crea una configurazione iniziale per Slic3r.
 
- ![Configuration Wizard: Welcome
-Screen](images/configuration-wizard/configuration_wizard_welcome.png "fig:")
+![Wizard di Configurazione: Schermata di Benvenuto](images/configuration-wizard/configuration_wizard_welcome.png "fig:")
 
+### 1. Tipo di Firmware
 
-1. Firmware Type
-----------------
+Il G-code prodotto da Slic3r è adattato a particolari tipi di firmware. Il primo passaggio richiede di specificare il firmware utilizzato dalla stampante. Questo dovrebbe essere stato specificato durante la costruzione o la configurazione della stampante. Se non sei sicuro, contatta il fornitore.
 
- The gcode produced by Slic3r is tailored to
-particular types of firmware. The first step prompts for the firmware
-that the printer uses. This should have been specified when the printer
-was built or configured. If unsure then contact the supplier.
+![Wizard di Configurazione: Tipo di Firmware](images/configuration-wizard/configuration_wizard_firmware_type.png "fig:")
 
- ![Configuration Wizard: Firmware
-Type](images/configuration-wizard/configuration_wizard_firmware_type.png "fig:")
+### 2. Dimensione del Piano
 
+Questa impostazione definisce la distanza massima che l'estrusore può percorrere lungo gli assi X e Y. Se le dimensioni non sono facilmente disponibili per la stampante, possono essere facilmente misurate.
 
-2. Bed Size
------------
+Assicurati di misurare dall'angolo in basso a sinistra dove l'ugello dell'estrusore si trova nella posizione di home fino alla distanza massima che l'ugello può percorrere in ciascuna direzione. Considera che il carrello X potrebbe toccare il telaio prima che l'ugello raggiunga la distanza massima, questo dipende dal modello e dalla marca della stampante.
 
- This setting defines the maximum distance the
-extruder may travel along the X and Y axis. If the dimensions are not
-readily available for the printer then it can be easily measured.
+Ricorda anche di controllare eventuali impostazioni dei finecorsa nel firmware che potrebbero limitare il movimento degli assi X/Y.
 
-Be sure to measure from the lower left corner where the extruder nozzle
-rests when are the home position to the maximum distance the nozzle can
-travel in each direction. Take into account that the X carriage may
-touch the frame before the nozzle reaches it’s full distance, this will
-depend on the printer make and model.
+![Wizard di Configurazione: Dimensione del Piano](images/configuration-wizard/configuration_wizard_bed_size.png "fig:")
 
-Also remember to check any firmware end-stop settings which may limit
-X/Y movement.
+### 3. Diametro dell'Ugello
 
- ![Configuration Wizard: Bed
-Size](images/configuration-wizard/configuration_wizard_bed_size.png "fig:")
+Il diametro dell'ugello del hot-end è solitamente chiaramente indicato nella descrizione del hot-end o nella documentazione associata al momento dell'acquisto. Valori comuni sono 0,5mm e 0,35mm.
 
+Se l'ugello è stato realizzato in casa o proviene da una fonte senza un diametro specificato, misura con attenzione l'apertura il più accuratamente possibile. Un modo per determinare la dimensione dell'ugello è estrudere lentamente (1mm/s) del filamento nell'aria libera e misurare lo spessore dell'estrusione risultante[^1]. Questo metodo tiene conto dell'espansione del materiale durante l'estrusione, e può essere utile anche se il diametro è noto.
 
-3. Nozzle Diameter
-------------------
+![Wizard di Configurazione: Diametro dell'Ugello](images/configuration-wizard/configuration_wizard_nozzle_diameter.png "fig:")
 
- The diameter of the hot-end nozzle is usually
-clearly displayed either in the description of the hot-end, or in the
-associated documentation, when the hot-end is purchased. Common values
-are 0.5mm and 0.35mm.
+### 4. Diametro del Filamento
 
-If the nozzle was home-made, or came from a source without a diameter
-given, then carefully measure the aperture as accurately as possible.
-One way of determining nozzle size is to very slowly (1mm/s) extrude
-some filament into free air and measure the thickness of the resulting
-extrusion[^1]. This has the benefit of taking die swell into account,
-and consequently may be a useful thing to do even if the diameter is
-known.
+Per ottenere risultati accurati, Slic3r deve conoscere con precisione quanto materiale viene spinto attraverso l'estrusore. È quindi fondamentale fornire un valore il più preciso possibile per il diametro del filamento.
 
- ![Configuration Wizard: Nozzle
-Diameter](images/configuration-wizard/configuration_wizard_nozzle_diameter.png "fig:")
+Sebbene il filamento utilizzato nelle stampanti FDM sia venduto con diametri standard di 3mm o 1,75mm, questa è solo una guida generale. Il diametro può variare tra diversi produttori e persino tra diversi lotti. Pertanto, è altamente consigliato prendere più misurazioni lungo una lunghezza di filamento e usare la media. Ad esempio, misurazioni di 2,89mm, 2,88mm, 2,90mm e 2,91mm produrrebbero una media di 2,895mm, che dovrebbe essere utilizzata.
 
+![Wizard di Configurazione: Diametro del Filamento](images/configuration-wizard/configuration_wizard_filament_diameter.png "fig:")
 
-4. Filament Diameter
---------------------
+### 5. Temperatura di Estrusione
 
- For Slic3r to produce accurate results it
-must know as accurately as possible how much material is pushed through
-the extruder. Therefore it is vital to give it as precise a value as
-possible for the filament diameter.
+La temperatura di estrusione dipende dal materiale, e la maggior parte dei materiali può operare in un intervallo di temperature. Il fornitore dovrebbe fornire indicazioni sulle temperature adatte. Una regola empirica molto generale è che il PLA si trova tra 160°C e 230°C, mentre l'ABS tra 215°C e 250°C. Materiali più esotici avranno intervalli diversi.
 
-Although the filament used in FDM printers is sold as being either 3mm
-or 1.75mm this is only a general guide. The diameter can vary between
-manufacturers and even between batches. Therefore it is highly
-recommended to take multiple measurements from along a length of the
-filament and use the average. For example, measurements of 2.89, 2.88,
-2.90 and 2.91 would yield an average of 2.895, and so this would be
-used.
+Questo è uno dei parametri che vorrai ottimizzare quando inizi a produrre stampe. La temperatura ottimale può variare anche tra diversi colori dello stesso materiale. Un altro fattore che può influenzare la temperatura scelta è la velocità di estrusione, dove generalmente una estrusione più rapida richiede temperature più elevate.
 
- ![Configuration Wizard: Filament
-Diamter](images/configuration-wizard/configuration_wizard_filament_diameter.png "fig:")
+**Nota:** È possibile controllare manualmente la temperatura dell'estrusore dal controller della stampante. In questo caso, la temperatura può essere impostata a zero.
 
+![Wizard di Configurazione: Temperatura di Estrusione](images/configuration-wizard/configuration_wizard_extrusion_temperature.png "fig:")
 
-5. Extrusion Temperature
-------------------------
+### 6. Temperatura del Piano di Stampa
 
- The extrusion temperature will depend on
-the material, and most can operate over a range of temperatures. The
-supplier should provide guidance as to which temperatures are suitable.
-A very general rule of thumb is that PLA lies between 160°C and 230°C,
-and ABS lies between 215°C and 250°C. More exotic materials will have a
-different range.
+Se la stampante è dotata di un piano di stampa riscaldato, questo parametro può essere impostato. Come per la temperatura dell'estrusore, il valore dipenderà dal materiale utilizzato. Una regola empirica è che il PLA richiede circa 60°C e l'ABS circa 110°C.
 
-This is one parameter which you will want to fine tune when you start
-producing prints. The optimal temperature can vary even between colours
-of the same material. Another factor which may affect the chosen
-temperature is how fast the extrusion is, where generally faster
-extrusion runs hotter.
+**Nota:** È possibile controllare manualmente la temperatura del piano di stampa dal controller della stampante. In questo caso, la temperatura può essere impostata a zero.
 
-Note: One may choose to control the extruder temperature manually from
-the printer controller. In this case the temperature can be set to zero.
+![Wizard di Configurazione: Temperatura del Piano di Stampa](images/configuration-wizard/configuration_wizard_bed_temperature.png "fig:")
 
- ![Configuration Wizard: Extrusion
-Temperature](images/configuration-wizard/configuration_wizard_extrusion_temperature.png "fig:")
+A questo punto, la procedura guidata è completata e la configurazione di base è definita.
 
-
-6. Bed Temperature
-------------------
-
- If the printer has a heated bed then this
-parameter may be set. As with the extruder temperature, the value will
-depend on the material used. A rule of thumb is that PLA requires  60°C
-and ABS requires  110°C.
-
-Note: One may choose to control the bed temperature manually from the
-printer controller. In this case the temperature can be set to zero.
-
- ![Configuration Wizard: Bed
-Temperature](images/configuration-wizard/configuration_wizard_bed_temperature.png "fig:")
-
-
-At this stage the wizard is complete and the basic configuration is
-defined.
-
- ![Configuration Wizard:
-End](images/configuration-wizard/configuration_wizard_end.png "fig:")
-
+![Wizard di Configurazione: Fine](images/configuration-wizard/configuration_wizard_end.png "fig:")
 
 [^1]: <http://forums.reprap.org/read.php?1,113374,113953>
