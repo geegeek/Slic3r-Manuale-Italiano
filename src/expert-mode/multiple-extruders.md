@@ -1,121 +1,55 @@
-% Multiple Extruders
+% Estrusori Multipli
 
-A printer with more than one extruder can be used in different ways: The
-additional extruder could print a different colour or material; or it
-could be assigned to print particular features, such as infill, support
-or perimeters.
+Una stampante con più di un estrusore può essere utilizzata in modi diversi: l'estrusore aggiuntivo può stampare un colore o un materiale diverso; oppure può essere assegnato a stampare caratteristiche specifiche, come il riempimento, i supporti o i perimetri.
 
-Multi-material printing requires a suitably designed object usually
-written in AMF format as this can handle multiple materials (see Model
-Formats in §). Details on how to create such a file
-are given below.
+La stampa multi-materiale richiede un oggetto adeguatamente progettato, solitamente scritto in formato AMF, che supporta materiali multipli (vedi Formati Modello in §). Di seguito vengono fornite istruzioni su come creare un file di questo tipo.
 
-Configuring Extruders
----------------------
+## Configurazione degli Estrusori
 
+Nella scheda `Impostazioni Stampante` è presente l'opzione `Estrusori`, sotto `Capacità`, che consente di definire il numero di estrusori. Incrementando questo valore, verrà aggiunta dinamicamente una definizione per un altro estrusore nel pannello a sinistra.
 
+![Opzioni per estrusori multipli - Scheda Impostazioni Stampante (Generale). Due estrusori sono definiti nel pannello a sinistra.](images/multipleextruders/printer_settings_general_multiple_extruder_options.png "fig:")
 
-In the `Printer Settings` tab there is an `Extruders` option, under
-`Capabilities`, which allows the number of extruders to be defined.
-Incrementing this value will dynamically add another extruder definition
-to the left-hand pane.
+Ogni estrusore può essere configurato come di consueto, ma ci sono impostazioni aggiuntive specifiche per le configurazioni con estrusori multipli.
 
- ![Multiple extruder options - Printer Settings Tab (General). Note
-the two extruders defined in the left-hand
-pane.](images/multipleextruders/printer_settings_general_multiple_extruder_options.png "fig:")
+![Opzioni per estrusori multipli - Scheda Impostazioni Stampante (Estrusore).](images/multipleextruders/printer_settings_extruder_multiple_extruder_options.png "fig:")
 
+-   **Offset dell'Estrusore**: deve essere utilizzato se il firmware non gestisce lo spostamento di ciascun ugello aggiuntivo. La documentazione del firmware dovrebbe indicare se questo è il caso. Ogni estrusore aggiuntivo riceve un offset rispetto al primo. Se il firmware gestisce questa funzione, tutti gli offset possono rimanere su 0,0.
 
-Each extruder can be configured as usual, however there are additional
-settings which must be set which are particular to multi-extruder
-setups.
+-   **Retrattazione per Estrusori Secondari**: Poiché l'estrusore secondario sarà inattivo mentre il primo lavora, è importante che il materiale venga sufficientemente ritratto per evitare l'oozing. Come per le impostazioni di retrazione standard (vedi p.), l'opzione `Lunghezza` viene misurata dal filamento grezzo che entra nell'estrusore.
 
- ![Multiple extruder options - Printer Settings Tab
-(Extruder).](images/multipleextruders/printer_settings_extruder_multiple_extruder_options.png "fig:")
+## Assegnazione dei Filamenti
 
+Se è stato selezionato un profilo di stampante con estrusori multipli, nella scheda `Plater` è possibile selezionare un filamento diverso per ciascun estrusore.
 
-The `Extruder offset` is to be used should the firmware not handle the
-displacement of each additional nozzle. Your firmware documentation
-should tell you if this is the case. Each additional extruder is given
-an offset in relation to the first one. If the firmware does handle this
-then all offsets can remain at 0,0.
+![Plater con opzioni di filamento multiplo.](images/multipleextruders/plater_multi_filament.png "fig:")
 
-Because the secondary extruder will be dormant whilst the first is
-working, and vice-versa, it is important that the material is
-sufficiently retracted to stop oozing. As with the regular retraction
-settings (see p. ) the `Length` options is measured from the raw
-filament entering the extruder.
+## Assegnazione degli Estrusori per Oggetti Monomateriale
 
-Assigning Filaments
--------------------
+Per stampe a materiale singolo, in cui l'estrusore secondario è destinato a un'estrusione specifica, la sezione `Estrusori Multipli` della scheda `Impostazioni di Stampa` consente di assegnare un estrusore a ciascun tipo di estrusione.
 
- When a printer profile with multiple
-extruders has been selected the `Plater` tab allows the selection of a
-different filament for each extruder.
+![Opzioni per estrusori multipli - Scheda Impostazioni di Stampa.](images/multipleextruders/print_settings_multiple_extruder_options.png "fig:")
 
- ![Plater with multiple filament
-options.](images/multipleextruders/plater_multi_filament.png "fig:")
+## Configurazione dei Cambi di Strumento
 
+La sezione `G-code Personalizzato` nella scheda `Impostazioni Stampante` include un'opzione per inserire codice G tra i cambi di strumento. Come per tutte le sezioni di codice G personalizzato, è possibile utilizzare variabili segnaposto per fare riferimento alle impostazioni di Slic3r. Tra queste ci sono le variabili `[previous_extruder]` e `[next_extruder]`.
 
-Assigning Extruders for Single-material Objects
------------------------------------------------
+![Opzioni per estrusori multipli - G-code per cambio di strumento.](images/multipleextruders/printer_settings_custom_gcode.png "fig:")
 
+## Stampa di Oggetti Multi-materiale
 
+Se esiste già un file AMF multi-materiale (ad esempio creato da un programma CAD in grado di esportare tale formato), questo può essere caricato in Slic3r come di consueto. L'assegnazione tra materiali dell'oggetto ed estrusori è sequenziale, cioè il primo materiale è assegnato al primo estrusore, e così via.
 
-For single material prints, where the secondary extruder is to be tasked
-with a particular extrusion, the `Multiple Extruders` section of the
-`Print Settings` tab gives the ability to assign an extruder to each
-extrusion type.
+## Generazione di File AMF Multi-materiale
 
- ![Multiple extruder options - Print Settings
-Tab.](images/multipleextruders/print_settings_multiple_extruder_options.png "fig:")
+Slic3r offre la possibilità di combinare più file STL in un file AMF multi-materiale.
 
+-   Dividi il design originale in parti separate nel programma CAD ed esporta ogni parte come STL.
 
-Configuring Tool Changes
-------------------------
+-   In Slic3r, seleziona `Combina file STL multi-materiale...` dal menu `File`.
 
+-   Quando appare la finestra di dialogo per i file, scegli il primo STL, che sarà assegnato al primo materiale (e quindi al primo estrusore). Clicca su `Apri` per selezionare il prossimo STL, e così via, fino a che ogni STL è assegnato a un materiale. Per indicare che non ci sono altri file STL, scegli `Annulla`.
 
+-   La finestra di dialogo successiva richiede la posizione e il nome del file AMF.
 
-The `Custom G-code` section of the `Printer Settings` tab has an option
-for inserting G-code between tool changes. As with all custom G-code
-sections, placeholder variables can be used to reference Slic3r
-settings. This includes the [previous\_extruder] and [next\_extruder]
-variables.
-
- ![Multiple extruder options - Tool change
-G-code.](images/multipleextruders/printer_settings_custom_gcode.png "fig:")
-
-
-Printing Multi-material Objects
--------------------------------
-
-
-
-If a multi-material AMF file already exists, because the CAD program can
-export such a format, then this can be loaded into Slic3r in the usual
-way. The mapping between object materials and extruders is sequential,
-i.e. the first material is assigned to the first extruder, etc.
-
-Generating multi-material AMF files
------------------------------------
-
-
-
-Slic3r has the feature to combine multiple STL files into a
-multi-material AMF file.
-
--   Split the original design into the separate parts within the CAD
-    program, and export each part as STL.
-
--   Within Slic3r, choose `Combine multi-material STL files...` from the
-    `File` menu.
-
--   When prompted with a file dialog, choose the first STL, which will
-    be assigned the first material (and hence the first extruder). Click
-    `Open` to be prompted for the next STL, and so on until each STL is
-    assigned a material. To signal there are no more STL files, choose
-    `Cancel`.
-
--   The following file dialog prompts for the location and name of the
-    AMF file.
-
-Once generated the file can be loaded and printed as described above.
+Una volta generato, il file può essere caricato e stampato come descritto sopra.
