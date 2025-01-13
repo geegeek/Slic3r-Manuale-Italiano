@@ -1,92 +1,41 @@
-% The Important First Layer
+% L'importanza del primo layer
 
- Before delving into producing the
-first print it is worthwhile taking a little detour to talk about the
-importance of getting the first layer right. As many have found through
-trial and error, if the first layer is not the best it can be then it
-can lead to complete failure, parts detaching, and warping. There are
-several techniques and recommendations one can heed in order to minimise
-the chance of this happening.
+Prima di addentrarsi nella produzione della prima stampa, vale la pena fare una piccola deviazione per parlare dell'importanza di ottenere il primo layer nel modo giusto. Come molti hanno scoperto attraverso tentativi ed errori, se il primo layer non è il migliore possibile, può portare a un completo fallimento, parti che si staccano e deformazioni. Esistono diverse tecniche e raccomandazioni da seguire per minimizzare la possibilità che ciò accada.
 
-#### Level bed.
+#### Livellamento del Piano
 
- Having a level bed is critical. If the distance between
-the nozzle tip and the bed deviates by even a small amount it can result
-in either the material not lying down on the bed (because the nozzle is
-too close and scrapes the bed instead), or the material lying too high
-from the bed and not adhering correctly.
+Avere un piano livellato è fondamentale. Se la distanza tra la punta dell'ugello e il piano di stampa devia anche solo di una piccola quantità, può risultare in materiale che non si deposita correttamente sul piano (perché l'ugello è troppo vicino e raschia il piano) oppure il materiale si deposita troppo in alto rispetto al piano e non aderisce correttamente.
 
-#### Higher temperature.
+#### Temperatura Più Alta
 
- The extruder hot-end and bed, if it is heated,
-can be made hotter for the first layer, thus decreasing the viscosity of
-the material being printed. As a rule of thumb, an additonal 5° is
-recommended.
+L'hot-end dell'estrusore e il piano di stampa, se riscaldato, possono essere impostati a temperature più elevate per il primo layer, diminuendo così la viscosità del materiale estruso. Come regola empirica, si consiglia un aumento di 5°.
 
-#### Lower speeds.
+#### Velocità Più Bassa
 
- Slowing down the extruder for the first layer
-reduces the forces applied to the molten material as it emerges,
-reducing the chances of it being stretched too much and not adhering
-correctly. 30% or 50% of the normal speed is recommended.
+Rallentare l'estrusore per il primo layer riduce le forze applicate al materiale fuso mentre esce dall'ugello, diminuendo le probabilità che venga allungato e non aderisca correttamente. Si raccomanda una velocità del 30% o del 50% rispetto alla velocità normale.
 
-#### Correctly calibrated extrusion rates.
+#### Tassi di Estrusione Calibrati Correttamente
 
- If too much material is laid down
-then the nozzle may drag through it on the second pass, causing it to
-lift off the bed (particularly if the material has cooled). Too little
-material may result in the first layer coming loose later in the print,
-leading either to detached objects or warping. For these reasons it is
-important to have a well-calibrated extrusion rate as recommended in
-§[calibration]).
+Se viene estruso troppo materiale, l'ugello potrebbe trascinare il materiale già depositato durante il secondo passaggio, causando il distacco dal piano (soprattutto se il materiale si è raffreddato). Troppo poco materiale potrebbe far sì che il primo layer si stacchi durante la stampa, portando a oggetti staccati o deformazioni. Per questi motivi, è importante avere un tasso di estrusione ben calibrato come raccomandato in §[calibrazione].
 
-#### First layer height.
+#### Altezza del Primo Layer
 
- A thicker layer height will provide more
-flow, and consequently more heat, making the extrusion adhere to the bed
-more. It also gives the benefit of giving more tolerance for the
-levelness of the bed. It is recommended to raise the first layer height
-to match the diameter of the nozzle, e.g. a first layer height of 0.35mm
-for a 0.35mm nozzle. Note: The first layer height is set this way
-automatically in simple mode.
+Un'altezza di layer più spessa fornisce più flusso e, di conseguenza, più calore, rendendo l'estrusione più aderente al piano di stampa. Offre anche il vantaggio di maggiore tolleranza per il livellamento del piano. Si consiglia di aumentare l'altezza del primo layer per eguagliare il diametro dell'ugello, ad esempio un'altezza del primo layer di 0,35mm per un ugello da 0,35mm. **Nota:** L'altezza del primo layer viene impostata automaticamente in questo modo in modalità semplice.
 
-#### Fatter extrusion width.
+#### Larghezza di Estrusione Maggiore
 
- The more material touching the bed, the
-better the object will adhere to it, and this can be achieved by
-increasing the extrusion width of the first layer, either by a
-percentage or a fixed amount. Any spaces between the extrusions are
-adjusted accordingly.
+Più materiale tocca il piano, migliore sarà l'adesione dell'oggetto. Questo può essere ottenuto aumentando la larghezza di estrusione del primo layer, sia in percentuale che in quantità fissa. Eventuali spazi tra le estrusioni vengono regolati di conseguenza.
 
-A value of approximately 200% is usually recommended, but note that the
-value is calculated from the layer height and so the value should only
-be set if the layer height is the highest possible. For example, if the
-layer height is 0.1mm, and the extrusion width is set to 200%, then the
-actual extruded width will only be 0.2mm, which is smaller than the
-nozzle. This would cause poor flow and lead to a failed print. It is
-therefore highly recommended to combine the high first layer height
-technique recommended above with this one. Setting the first layer
-height to 0.35mm and the first extrusion width to 200% would result in a
-nice fat extrusion 0.65mm wide.
+Si consiglia un valore di circa 200%, ma nota che il valore viene calcolato sull'altezza del layer e quindi dovrebbe essere impostato solo se l'altezza del layer è la più alta possibile. Ad esempio, se l'altezza del layer è 0,1mm e la larghezza di estrusione è impostata al 200%, la larghezza effettiva estrusa sarà solo 0,2mm, inferiore al diametro dell'ugello. Ciò causerebbe un flusso insufficiente e porterebbe a una stampa fallita. Pertanto, è altamente consigliato combinare la tecnica di altezza del primo layer elevata consigliata sopra con questa. Impostare l'altezza del primo layer a 0,35mm e la larghezza di estrusione del primo layer al 200% risulterà in un'estrusione spessa e bella larga 0,65mm.
 
-#### Bed material.
+#### Materiale del Piano di Stampa
 
- Many options exist for the material to use for the
-bed, and preparing the right surface can vastly improve first layer
-adhesion.
+Esistono molte opzioni per il materiale da utilizzare per il piano di stampa, e preparare la superficie giusta può migliorare notevolmente l'adesione del primo layer.
 
-PLA is more forgiving and works well on PET, Kapton, or blue painters
-tape.
+Il PLA è più indulgente e funziona bene su PET, Kapton o nastro adesivo blu per pittori.
 
-ABS usually needs more cajoling and, whilst it can print well on PET and
-Kapton, there are reports that people have success by applying hairspray
-to the bed before printing. Others have reported that an ABS slurry
-(made from dissolving some ABS in Acetone) thinly applied can also help
-keep the print attached.
+L'ABS di solito necessita di maggior cura e, sebbene possa essere stampato bene su PET e Kapton, ci sono segnalazioni che le persone abbiano successo applicando lacca per capelli al piano di stampa prima della stampa. Altri hanno riportato che una slurry di ABS (realizzata dissolvendo un po' di ABS in acetone) applicata sottilmente può anche aiutare a mantenere la stampa attaccata.
 
-#### No cooling.
+#### Nessun Raffreddamento
 
- Directly related with the above, it makes no sense to
-increase the temperature of the first layer and still have a fan or
-other cooling mechanism at work. Keeping the fan turned off for the
-first few layers is generally recommended.
+Direttamente correlato a quanto sopra, non ha senso aumentare la temperatura del primo layer e avere ancora un ventilatore o un altro meccanismo di raffreddamento in funzione. È generalmente consigliato tenere il ventilatore spento per i primi strati.
