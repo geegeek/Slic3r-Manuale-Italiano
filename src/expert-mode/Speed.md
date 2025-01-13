@@ -1,87 +1,39 @@
-% Speed
+% Velocità
 
-Once the printer is reliably producing good quality prints it may be
-desirable to increase the speed. Doing this provides several benefits,
-the most obvious of which is that the results are produced quicker, but
-also faster print times can be utilised in producing more layers, i.e.
-lower layer height, thus improving perceived print quality. An
-additional benefit is that a faster travel movement, between extrusions,
-can reduce the effects of oozing.
+Una volta che la stampante produce stampe di buona qualità in modo affidabile, potrebbe essere utile aumentare la velocità. Questo offre diversi vantaggi, il più ovvio è la riduzione del tempo di stampa. Inoltre, tempi di stampa più rapidi possono consentire di utilizzare più layer, ovvero un'altezza di layer inferiore, migliorando così la qualità percepita della stampa. Un ulteriore beneficio è che un movimento di viaggio più veloce, tra un'estrusione e l'altra, può ridurre gli effetti dell'oozing.
 
-The best approach is to increment the various speed parameters in small
-steps and observe the effect each change has on print quality. Travel
-speed is a safe starting point, and it is not unrealistic to attain
-speeds of up to 250mm/s (if your printer can handle it). Adjusting the
-speed of perimeters, infill is available in simple mode, and the general
-rule is to have the perimeter go a little slower than the infill in
-order to reduce possible blemishes on the surface (infill can be faster
-because slight gaps will not matter as much).
+Il miglior approccio è incrementare i vari parametri di velocità a piccoli passi e osservare l'effetto di ogni cambiamento sulla qualità di stampa. La velocità di viaggio è un buon punto di partenza e non è irrealistico raggiungere velocità fino a 250mm/s (se la tua stampante è in grado di gestirle). In modalità semplice, è possibile regolare la velocità di perimetri e riempimenti, con la regola generale di impostare il perimetro leggermente più lento rispetto al riempimento per ridurre le imperfezioni sulla superficie (il riempimento può essere più veloce perché piccoli spazi vuoti non influenzano tanto).
 
-Expert mode offers more parameters to fine tune printer speeds.
-Differentiation between external, small and other perimeters, infill
-locations, and bridges and gaps are available, as well as the ability to
-slow down for the first layer.
+La modalità esperto offre più parametri per ottimizzare le velocità di stampa. È possibile differenziare tra perimetri esterni, piccoli dettagli e altri perimetri, posizioni del riempimento, ponti e gap, oltre alla possibilità di rallentare per il primo layer.
 
- ![Expert mode speed
-options.](images/speed_advanced_settings.png "fig:")
+![Opzioni avanzate di velocità in modalità esperto.](images/speed_advanced_settings.png "fig:")
 
+Quando indicato, un valore può essere espresso in percentuale, in relazione al valore precedente, ad esempio il 50% di riempimento solido sarà la metà del valore definito per il riempimento.
 
-Where indicated a value can be given in percentage. This is in relation
-to the preceding value, e.g. 50% solid infill would be half of the value
-defined for infill.
+Ecco alcune linee guida generali per ogni opzione:
 
-A few general guidelines for each option:
+-   **Perimetri** - In modalità esperto, questo parametro può essere leggermente aumentato poiché l'opzione `Perimetri esterni` può essere usata per garantire superfici esterne senza imperfezioni.
 
--   `Perimeters` - In expert mode this parameter can be increased
-    slightly as the `External perimeters` option can be used to ensure
-    blemish free external faces.
+-   **Piccoli perimetri** - Pensato per fori, isole e dettagli fini, una velocità più lenta è consigliata.
 
--   `Small perimeters` - Meant for holes, islands and fine details, a
-    slower speed here is recommended.
+-   **Perimetri esterni** - Un valore leggermente più lento può garantire superfici più pulite.
 
--   `External perimeters` - A slightly slower value may ensure cleaner
-    surfaces.
+-   **Riempimento** - Il più veloce possibile senza compromettere l'integrità della struttura di riempimento. Estrusioni troppo rapide possono rompersi e creare punti deboli.
 
--   `Infill` - As fast as you can without compromising the integrity of
-    the fill structure. Faster extrusions can break and result in weak
-    spots.
+-   **Riempimento solido** - Il fondo del modello e eventuali layer solidi aggiuntivi sono di solito leggermente più lenti del riempimento ma più veloci dei perimetri.
 
--   `Solid infill` - The bottom of the model, and any additional solid
-    layers is usually slightly slower than infill but faster than
-    perimeters.
+-   **Riempimento solido superiore** - Consenti il tempo necessario affinché l'estrusione copra uniformemente i layer superiori precedenti, producendo una superficie superiore pulita. Gli ultimi layer dovrebbero aver coperto bene la struttura di riempimento, preparando la base per una finitura ordinata.
 
--   `Top solid infill` - Allow time for the extrusion to cleanly cover
-    the previous top layers and result in a tidy top surface. the last
-    few layers should have bridged the infill structure nicely,
-    preparing the way for a neat finish.
+-   **Materiale di supporto** - Generalmente le strutture di supporto possono essere realizzate rapidamente, purché la base sia adeguatamente supportata.
 
--   `Support material` - Generally support structures are quick and
-    dirty, and so long as the base is adequately supported they can be
-    built as quickly as they can.
+-   **Ponti** - L'estrusione su distanze dipende dal materiale e dal raffreddamento. Procedere troppo lentamente provoca cedimenti, mentre procedere troppo velocemente porta a rotture. La sperimentazione è essenziale, ma in genere i ponti sono più lenti dei perimetri.
 
--   `Bridges` - Having the extrusion span distances depends on the
-    material and cooling. Going too slow will result in sagging, too
-    fast will result in broken strands. Experimentation is the key here,
-    but generally bridging runs slower than perimeters.
+-   **Riempimento dei gap** - Riempire piccoli gap porta l'estrusore a oscillare rapidamente, e le vibrazioni risultanti potrebbero influire negativamente sulla stampante. Un valore più basso può prevenire questo problema. Un'impostazione pari a zero disabilita completamente il riempimento dei gap.
 
--   `Gap fill` - Filling in small gaps results in the extruder quickly
-    oscillating and the resulting shaking and resonance could have a
-    detrimental affect on the printer. A smaller value here can guard
-    against this. A setting of zero disables gap filling completely.
+-   **Viaggio** - Il più veloce possibile per minimizzare l'oozing.
 
--   `Travel` - As fast as your printer will allow in order to minimise
-    ooze.
+-   **Velocità del primo layer** - Come menzionato nella sezione dedicata al primo layer, è importante che il primo layer sia posato correttamente, e un ritmo più lento aiuta enormemente. Impostare un valore del 50%, o anche inferiore, può fare la differenza.
 
--   `First layer speed` - As mentioned in section
-    , the first layer is important to
-    lay down correctly, and a slower pace helps enormously. Setting a
-    value of 50%, or even less, can really help.
+`Controllo dell'accelerazione` è un'impostazione avanzata che consente di configurare l'accelerazione per perimetri, riempimenti, ponti e un'impostazione predefinita generale. La scelta dei valori dipende dalle capacità della macchina. Le impostazioni nel firmware possono essere un buon punto di partenza.
 
-`Acceleration control` is an advanced setting allowing acceleration
-settings for perimeters, infill, bridge, as well as a default setting,
-to be made. Deciding which values to set depends on the capabilities of
-the machine. Any settings within the firmware may be a good starting
-point.
-
-Take into account any restrictions enforced by the firmware as many have
-settings for the maximum safe speed of each axis.
+Considera eventuali restrizioni imposte dal firmware, poiché molti prevedono impostazioni per la velocità massima sicura di ciascun asse.
